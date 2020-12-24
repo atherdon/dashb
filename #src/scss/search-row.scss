@@ -1,0 +1,143 @@
+.search-row {
+	display: flex;
+	margin-top: 10px;
+	border: 1px solid $iron;
+	width: 100%;
+
+	&__content {
+		display: flex;
+		margin: 10px;
+	}
+
+	&__title {
+		position: relative;
+		margin-right: 10px;
+
+		a {
+			color: $cod-gray;
+		}
+
+		.edit {
+			width: 10px;
+			opacity: 0;
+		}
+
+		.title-text {
+			&:hover {
+				color: $green-darken;
+
+				.edit {
+					fill: $green-darken;
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&__btns-block {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		display: flex;
+
+		.btn-svg {
+			margin-bottom: -2px;
+		}
+
+		.btn {
+			margin-right: 10px;
+			border: 1px solid $green-darken;
+			padding: 0 12px;
+			font-size: 14px;
+			line-height: 35px;
+			color: $green-darken;
+			background-color: transparent;
+
+			svg {
+				width: 14px;
+				height: 14px;
+				fill: $green-darken;
+			}
+
+			&:hover {
+				border: 1px solid $green;
+				color: $green;
+
+				svg {
+					fill: $green;
+				}
+			}
+
+			&.delete {
+				border: 1px solid $bittersweet;
+
+				svg {
+					fill: $bittersweet;
+				}
+
+				&:hover {
+					border: 1px solid $green;
+				}
+			}
+		}
+	}
+
+	&__author,
+	&__info {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		justify-content: space-between;
+		margin-right: 20px;
+		max-width: 100px;
+		font-size: 12px;
+
+		.author-caption {
+			
+		}
+
+		.author-name {
+			font-family: "JBM-Bold";
+			font-size: 14px;
+		}
+
+		.author-bottom {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-top: 5px;
+
+			span {
+				display: flex;
+				align-items: center;
+				margin-right: 10px;
+				white-space: nowrap;
+
+				svg {
+					margin-right: 3px;
+					width: 12px;
+				}
+			}
+		}
+	}
+
+	&__info {
+		.info-caption {
+			.edited {
+				border-radius: 2px;
+				padding: 2px 5px;
+				background-color: $starship;
+			}
+		}
+
+		.info-details {
+			display: flex;
+			flex-direction: column;
+
+			span {
+				white-space: nowrap;
+			}
+		}
+
+	}
+}
