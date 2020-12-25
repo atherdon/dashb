@@ -838,12 +838,14 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 100%;
     margin: 10px;
 }
 
 .search-row__title {
     position: relative;
     margin-right: 10px;
+    width: 50%;
 }
 
 .search-row__title a {
@@ -972,10 +974,23 @@ a {
     width: 12px;
 }
 
-.search-row__info .info-caption .edited {
+.search-row__info .info-caption .edited,
+.search-row__info .info-caption .rejected,
+.search-row__info .info-caption .submitted {
     border-radius: 2px;
     padding: 2px 5px;
+}
+
+.search-row__info .info-caption .edited {
     background-color: #f5ec43;
+}
+
+.search-row__info .info-caption .rejected {
+    background-color: #ff9797;
+}
+
+.search-row__info .info-caption .submitted {
+    background-color: #0f0;
 }
 
 .search-row__info .info-details {
