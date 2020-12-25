@@ -976,21 +976,37 @@ a {
 
 .search-row__info .info-caption .edited,
 .search-row__info .info-caption .rejected,
-.search-row__info .info-caption .submitted {
+.search-row__info .info-caption .submitted,
+.search-row__info .info-caption .published,
+.search-row__info .info-caption .empty,
+.search-row__info .info-caption .sheduled {
     border-radius: 2px;
     padding: 2px 5px;
 }
 
 .search-row__info .info-caption .edited {
-    background-color: #f5ec43;
+    color: #b58a49;
+    background-color: #fcd343;
 }
 
 .search-row__info .info-caption .rejected {
+    color: #b9486b;
     background-color: #ff9797;
 }
 
 .search-row__info .info-caption .submitted {
-    background-color: #0f0;
+    background-color: #3fd55f;
+}
+
+.search-row__info .info-caption .published {
+    color: #736da0;
+    background-color: #bee3f8;
+}
+
+.search-row__info .info-caption .empty,
+.search-row__info .info-caption .sheduled {
+    color: #bfd0e3;
+    background-color: #f0f4f8;
 }
 
 .search-row__info .info-details {

@@ -127,22 +127,37 @@
 		.info-caption {
 			.edited,
 			.rejected,
-			.submitted {
+			.submitted,
+			.published,
+			.empty,
+			.sheduled {
 				border-radius: 2px;
 				padding: 2px 5px;
 			}
 
 			.edited {
-				background-color: $starship;
+				color: $driftwood;
+				background-color: $bright-sun;
 			}
 
 			.rejected {
-				//color: $white;
+				color: $blush;
 				background-color: $mona-lisa;
 			}
 
 			.submitted {
-				background-color: $green;
+				background-color: $emerald;
+			}
+
+			.published {
+				color: $kimberly;
+				background-color: $tropical-blue;
+			}
+
+			.empty,
+			.sheduled {
+				color: $periwinkle-gray;
+				background-color: $catskill-white;
 			}
 		}
 
