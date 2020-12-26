@@ -56,6 +56,14 @@
 }
 
 .bad-keywords {
+	.btn {
+		border: 2px solid $crusoe;
+		padding: 0;
+		width: 30px;
+		height: 30px;
+		line-height: 0;
+		background-color: $white;
+	}
 
 	&__list {
 		display: flex;
@@ -67,22 +75,12 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		margin-bottom: 20px;
 		margin-right: 30px;
-		//padding-left: 20px;
+		margin-bottom: 20px;
 		width: 30%;
 
 		&:nth-child(3n) {
 			margin-right: 0;
-		}
-
-		.btn {
-			border: 2px solid $crusoe;
-			padding: 0;
-			width: 30px;
-			height: 30px;
-			line-height: 0;
-			background-color: $white;
 		}
 	}
 }

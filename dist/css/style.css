@@ -391,8 +391,24 @@ template {
 }
 
 @font-face {
+    src: url("../fonts/JBM-Bold-Italic.woff") format("woff"), url("../fonts/JBM-Bold-Italic.woff2") format("woff2");
+  font-family: "JBM-Bold-Italic";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
     src: url("../fonts/JBM-Regular.woff") format("woff"), url("../fonts/JBM-Regular.woff2") format("woff2");
   font-family: "JBM-Regular";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    src: url("../fonts/JBM-Italic.woff") format("woff"), url("../fonts/JBM-Italic.woff2") format("woff2");
+  font-family: "JBM-Italic";
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -450,7 +466,15 @@ a {
 }
 
 .btn {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     outline: none;
     border: 1px solid #1c1c1c;
     padding: 0 45px;
@@ -466,6 +490,18 @@ a {
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
+}
+
+.modal-btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 10px;
+}
+
+.modal-btns a {
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .burger {
@@ -1136,6 +1172,15 @@ a {
     color: #bfd0e3;
 }
 
+.bad-keywords .btn {
+    border: 2px solid #004d00;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 0;
+    background-color: #fff;
+}
+
 .bad-keywords__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1157,8 +1202,8 @@ a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin-bottom: 20px;
     margin-right: 30px;
+    margin-bottom: 20px;
     width: 30%;
 }
 
@@ -1166,18 +1211,118 @@ a {
     margin-right: 0;
 }
 
-.bad-keywords__item .btn {
-    border: 2px solid #004d00;
-    padding: 0;
-    width: 30px;
-    height: 30px;
-    line-height: 0;
-    background-color: #fff;
-}
-
 .btn-delete {
     width: 10px;
     fill: #004d00;
+}
+
+.report {
+    margin: 0 auto;
+    width: 780px;
+}
+
+.report__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 40px;
+}
+
+.report__name {
+    font-family: "JBM-Bold";
+    font-size: 50px;
+}
+
+.report__period {
+    font-family: "JBM-Bold";
+    font-size: 25px;
+}
+
+.report__stat {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.report__stat-inner {
+    padding: 20px;
+    width: 65%;
+    font-size: 22px;
+    color: #fff;
+}
+
+.report__stat-inner .articles {
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.report__stat-inner .articles span {
+    font-family: "JBM-Bold-Italic";
+    font-size: 30px;
+}
+
+.report__stat-inner.edited {
+    color: #3b3b3b;
+    background-color: #ffdb0d;
+}
+
+.report__stat-inner.edited .week-stat {
+    font-family: "JBM-Bold-Italic";
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.report__stat-inner.published {
+    color: #fff;
+    background-color: #177daf;
+}
+
+.report__stat-inner.published .week-stat {
+    font-family: "JBM-Bold-Italic";
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.report__table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 20px;
+    font-family: "JBM-Regular";
+}
+
+.report__table-item {
+    border-bottom: 2px solid #1c1c1c;
+}
+
+.report__table-item.caption {
+    padding-bottom: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.report__table-item.title {
+    padding-left: 20px;
+}
+
+.report__table-item.number,
+.report__table-item.difference,
+.report__table-item.title {
+    font-family: "JBM-Bold";
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.report__table-item.number,
+.report__table-item.difference {
+    text-align: center;
+}
+
+.report__table-item.difference {
+    font-family: "JBM-Bold-Italic";
 }
 
 @media only screen and (max-width: 968px) {

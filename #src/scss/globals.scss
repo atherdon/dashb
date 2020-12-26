@@ -40,7 +40,9 @@ a {
 }
 
 .btn {
-	display: block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	outline: none;
 	border: 1px solid $cod-gray;
 	padding: 0 45px;
@@ -53,5 +55,15 @@ a {
 		border: 1px solid $green-darken;
 		color: $green-darken;
 		transition: all 0.3s ease 0s;
+	}
+}
+
+.modal-btns {
+	display: flex;
+	margin-top: 10px;
+
+	a {
+		margin-right: 10px;
+		margin-bottom: 10px;
 	}
 }
