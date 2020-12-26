@@ -240,3 +240,22 @@ Tags
 
 - mobile-app-development 4
 
+
+
+============
+
+
+### Story Statuses
+
+![Newsletters(3)](https://user-images.githubusercontent.com/1469198/103110951-53ab5f00-4650-11eb-97fc-27d31445dcb2.png)
+
+
+html structure statuses:
+```
+<span class="edited">edited</span>
+<span class="submited">submited</span>
+<span class="rejected">rejected</span>
+<span class="published">published</span>
+<span class="sheduled">sheduled</span>
+<span class="empty">empty tag</span>
+```
