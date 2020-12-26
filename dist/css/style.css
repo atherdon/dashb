@@ -1172,6 +1172,15 @@ a {
     color: #bfd0e3;
 }
 
+.bad-keywords .btn {
+    border: 2px solid #004d00;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 0;
+    background-color: #fff;
+}
+
 .bad-keywords__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1193,22 +1202,13 @@ a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin-bottom: 20px;
     margin-right: 30px;
+    margin-bottom: 20px;
     width: 30%;
 }
 
 .bad-keywords__item:nth-child(3n) {
     margin-right: 0;
-}
-
-.bad-keywords__item .btn {
-    border: 2px solid #004d00;
-    padding: 0;
-    width: 30px;
-    height: 30px;
-    line-height: 0;
-    background-color: #fff;
 }
 
 .btn-delete {
