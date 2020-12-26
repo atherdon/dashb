@@ -6,12 +6,14 @@
 
 	&__content {
 		display: flex;
-		margin: 10px;
+		padding: 7px 5px 5px 20px;
+		width: 100%;
 	}
 
 	&__title {
 		position: relative;
 		margin-right: 10px;
+		width: 50%;
 
 		a {
 			color: $cod-gray;
@@ -82,6 +84,13 @@
 		}
 	}
 
+	&__author-inner,
+	&__info-inner {
+		
+		width: 100%;
+		height: 100%;
+	}
+
 	&__author,
 	&__info {
 		display: flex;
@@ -89,7 +98,7 @@
 		align-items: stretch;
 		justify-content: space-between;
 		margin-right: 20px;
-		max-width: 100px;
+		width: 120px;
 		font-size: 12px;
 
 		.author-caption {
@@ -99,12 +108,13 @@
 		.author-name {
 			font-family: "JBM-Bold";
 			font-size: 14px;
+			
 		}
 
 		.author-bottom {
 			display: flex;
 			align-items: center;
-			justify-content: space-between;
+			//justify-content: space-between;
 			margin-top: 5px;
 
 			span {
@@ -123,21 +133,50 @@
 
 	&__info {
 		.info-caption {
-			.edited {
+			.edited,
+			.rejected,
+			.submited,
+			.published,
+			.empty,
+			.sheduled {
 				border-radius: 2px;
 				padding: 2px 5px;
-				background-color: $starship;
+			}
+
+			.edited {
+				color: $driftwood;
+				background-color: $bright-sun;
+			}
+
+			.rejected {
+				color: $blush;
+				background-color: $mona-lisa;
+			}
+
+			.submited {
+				background-color: $emerald;
+			}
+
+			.published {
+				color: $kimberly;
+				background-color: $tropical-blue;
+			}
+
+			.empty,
+			.sheduled {
+				color: $periwinkle-gray;
+				background-color: $catskill-white;
 			}
 		}
 
 		.info-details {
 			display: flex;
 			flex-direction: column;
+			
 
 			span {
 				white-space: nowrap;
 			}
 		}
-
 	}
 }
