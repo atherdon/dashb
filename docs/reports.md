@@ -3,122 +3,122 @@
 
 ### Edited
 
-sum 122 2.52%
+**sum** 122 2.52%
 
-Programming 20 5.26%
+**Programming** 20 5.26%
 
-Python 0 -100.00%
+**Python 0 -100.00%
 
-Blockchain
+**Blockchain
 10
 -16.67%
 
-Amazon 0 0 
+**Amazon 0 0 
 
-Business
+**Business
 10
 -44.44%
 
-Entrepreneurship
+**Entrepreneurship
 1
 0.00%
 
-Repost
+**Repost
 34
 13.33%
 
 
-Security
+**Security
 2
 -33.33%
 
-Ai
+**Ai
 2
 -60.00%
 
-Old articles
+**Old articles
 6
 100.00%
 
-Brands
+**Brands
 27
 
 
-Top Authors
+**Top Authors
 10
 
 ---
 
-Published
-sum
+**Published
+**sum
 58
 -40.82%
 
 
-Programming
+**Programming
 10
 -37.50%
 
-Python 0 0
+**Python 0 0
 
-Blockchain
+**Blockchain
 3
 -70.00%
 
 
-Amazon
+**Amazon
 
 -100.00%
 
-Business
+**Business
 6
 -45.45%
 
 
-Entrepreneurship 0 -100.00%
+**Entrepreneurship 0 -100.00%
 
 
-Repost
+**Repost
 16
 -30.43%
 
-Security
+**Security
 3
 50.00%
 
-Ai
+**Ai
 1
 -50.00%
 
-Old articles
+**Old articles
 1
 0.00%
 
-Brands 10 -
+**Brands 10 -
 
-Top Authors 8 -
+**Top Authors 8 -
 
 
 
 ---
 
-Rejected
+**Rejected
 7
 -88.14%
 
 ---
 
-Reposts	 16 
-Original articles 42
+**Reposts	 16 
+**Original articles 42
 
 
 ---
 
 xxx | Edited | Edited, % | Published | Published, % | Rejected | Rejected, %
 
-Brands |	27	| 42.11%	| 10	| -56.52%
+**Brands** |	27	| 42.11%	| 10	| -56.52%
 				
-Top Authors	| 10	| 42.86%	| 8	| 0.00%
+**Top Authors**	| 10	| 42.86%	| 8	| 0.00%
 
 
 
