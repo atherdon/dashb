@@ -1325,6 +1325,12 @@ a {
     font-family: "JBM-Bold-Italic";
 }
 
+.report__chart {
+    padding: 40px 0;
+    width: 100%;
+    height: 100%;
+}
+
 @media only screen and (max-width: 968px) {
     .burger {
         display: block;
