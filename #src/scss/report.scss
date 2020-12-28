@@ -29,7 +29,11 @@
 		font-size: 22px;
 		color: $white;
 
-		.articles {
+		p {
+			margin: 0;
+		}
+
+		.title-text {
 			padding-bottom: 10px;
 			text-transform: uppercase;
 
