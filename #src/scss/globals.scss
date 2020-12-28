@@ -34,13 +34,19 @@ a {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	//justify-content: center;
 	width: 100%;
 	height: 100%;
+	// margin: 0 auto;
+	// width: 980px;
 }
 
 .calendar {
 	padding: 42px 24px 50px;
+}
+
+.steps {
+	padding: 40px;
 }
 
 .btn {
@@ -64,7 +70,10 @@ a {
 
 .modal-btns {
 	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
 	margin-top: 10px;
+	width: 980px;
 
 	a {
 		margin-right: 10px;
