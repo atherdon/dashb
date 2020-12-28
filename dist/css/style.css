@@ -830,7 +830,7 @@ a {
 .search-btn__caption {
     position: absolute;
     left: 50%;
-    top: -10px;
+    top: -15px;
     padding: 0 10px;
     font-size: 16px;
     background-color: #fff;
@@ -1278,12 +1278,16 @@ a {
     color: #fff;
 }
 
-.report__stat-inner .articles {
+.report__stat-inner p {
+    margin: 0;
+}
+
+.report__stat-inner .title-text {
     padding-bottom: 10px;
     text-transform: uppercase;
 }
 
-.report__stat-inner .articles span {
+.report__stat-inner .title-text span {
     font-family: "JBM-Bold-Italic";
     font-size: 30px;
 }
