@@ -467,8 +467,8 @@ a {
     height: 100%;
 }
 
-.wrapper.calendar {
-    padding: 20px;
+.calendar {
+    padding: 42px 24px 50px;
 }
 
 .btn {
