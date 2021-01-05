@@ -1,0 +1,26 @@
+.pagination {
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+
+	a {
+		display: flex;
+		margin: 0 4px;
+		border: 1px solid $iron;
+		padding: 8px 16px;
+		text-decoration: none;
+		color: $cod-gray;
+		transition: background-color 0.3s;
+
+		&:hover {
+			color: $white;
+			background-color: $green;
+		}
+
+		&.active {
+			border: 1px solid $green-darken;
+			color: $white;
+			background-color: $green-darken;
+		}
+	}
+}

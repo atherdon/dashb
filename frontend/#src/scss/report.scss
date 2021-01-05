@@ -1,0 +1,110 @@
+.report {
+	margin: 0 auto;
+	width: 780px;
+
+	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 40px;
+	}
+
+	&__name {
+		font-family: "JBM-Bold";
+		font-size: 50px;
+	}
+
+	&__period {
+		font-family: "JBM-Bold";
+		font-size: 25px;
+	}
+
+	&__stat {
+		display: flex;
+	}
+
+	&__stat-inner {
+		padding: 20px;
+		width: 65%;
+		font-size: 22px;
+		color: $white;
+
+		p {
+			margin: 0;
+		}
+
+		.title-text {
+			padding-bottom: 10px;
+			text-transform: uppercase;
+
+			span {
+				font-family: "JBM-Bold-Italic";
+				font-size: 30px;
+			}
+		}
+
+		&.edited {
+			color: $mine-shaft;
+			background-color: $amber;
+
+			.week-stat {
+				font-family: "JBM-Bold-Italic";
+				color: rgba(0, 0, 0, 0.2);
+			}
+		}
+
+		&.published {
+			color: $white;
+			background-color: $denim;
+
+			.week-stat {
+				font-family: "JBM-Bold-Italic";
+				color: rgba(255, 255, 255, 0.5);
+			}
+		}
+	}
+
+	&__table {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		margin-top: 20px;
+		font-family: "JBM-Regular";
+	}
+
+	&__table-item {
+		border-bottom: 2px solid $cod-gray;
+
+		&.caption {
+			padding-bottom: 10px;
+			font-size: 18px;
+			text-align: center;
+		}
+
+		&.title {
+			padding-left: 20px;
+		}
+
+		&.number,
+		&.difference,
+		&.title {
+			font-family: "JBM-Bold";
+			font-size: 18px;
+			line-height: 40px;
+		}
+
+		&.number,
+		&.difference {
+			text-align: center;
+		}
+
+		&.difference {
+			font-family: "JBM-Bold-Italic";
+		}
+	}
+
+	&__chart {
+		//padding: 40px 0;
+		width: 100%;
+		height: 100%;
+	}
+}

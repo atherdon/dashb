@@ -1,0 +1,91 @@
+.form-bad-keywords {
+	margin: 0 auto;
+	width: 800px;
+
+	&__top {
+		display: flex;
+	}
+
+	&__top-item {
+		margin-top: 20px;
+		width: 50%;
+
+		.title {
+			font-family: "JBM-Bold";
+			font-size: 16px;
+		}
+
+		p {
+			padding-bottom: 20px;
+		}
+
+		&.decr {
+			margin-right: 40px;
+			width: 340px;
+		}
+	}
+}
+
+.form-input {
+	&__content {
+		display: flex;
+		justify-content: flex-end;
+
+		.btn {
+			&.keyword {
+				margin-left: 10px;
+				border: 2px solid $crusoe;
+				padding: 0 10px;
+				font-family: "JBM-Bold";
+				font-size: 14px;
+				text-transform: capitalize;
+				color: $crusoe;
+				background-color: $white;
+			}
+		}
+
+		.input {
+			outline: 1px solid $mine-shaft;
+			padding: 0 10px;
+
+			&::placeholder {
+				color: $periwinkle-gray;
+			}
+		}
+	}
+}
+
+.bad-keywords {
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-right: 30px;
+		margin-bottom: 20px;
+		width: 30%;
+
+		.btn {
+			border: 2px solid $crusoe;
+			padding: 0;
+			width: 30px;
+			height: 30px;
+			line-height: 0;
+			background-color: $white;
+		}
+
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+	}
+}
+
+.btn-delete {
+	width: 10px;
+	fill: $crusoe;
+}

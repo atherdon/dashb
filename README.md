@@ -1,261 +1,70 @@
-# dashb
+# Getting Started with Create React App
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Available Scripts
 
-----------
+In the project directory, you can run:
 
+### `npm start`
 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Alchemy of the additive manufacturing
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-Author: @golubev
-- 36
-- 7.2hrs
-- submitted
-- Yesterday at 11:04 PM
+### `npm test`
 
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### `npm run build`
 
-----------
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Musician Turned B2B Marketing Superstar: Gaetano DiNardi’s Underdog Story
+### `npm run eject`
 
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Author
-@brianwallace 
-- 80
-- 3.0hrs
-- edited
-- Yesterday at 9:05 AM
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-----------
+## Learn More
 
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-"Supply chain financing enables businesses not only to survive but also to
+### Code Splitting
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
+### Analyzing the Bundle Size
 
-Author
-@edward-moon
-- 14
-- 1.8hrs
-- submitted
-- Yesterday at 10:44 AM
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
+### Making a Progressive Web App
 
-----------
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
+### Advanced Configuration
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-Non-primitive non-linear data structures: Trees
+### Deployment
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
+### `npm run build` fails to minify
 
-Author
-@marvin 
-- 9
-- 0.6hrs
-- edited
-- Yesterday at 9:31 AM
-
-
-----------
-
-
-
-How to Harness the Power of Content Marketing in 2021, As Told By 8 of the
-
-
-
-Author
-@anna-pozniak
-- 4
-- 0.6hrs
-- submitted
-- Yesterday at 2:24 PM
-
-
-----------
-
-
-
-How high is the tide of EU Crypto Assets with MiCA?
-
-
-
-Author
-@maria-lobanova
-- 5
-- 0.3hrs
-- edited
-- Last Wednesday at 10:15 AM
-
-
-----------
-
-
-
-Where can I read The Time's title in Bitcoin blockchain?
-
-
-
-Author
-@bitcoin-in-action 
-- 4
-- 0.3hrs
-- edited
-- Last Tuesday at 10:42 AM
-
-
-
-
-
-----------
-
-
-
-
-How to access the Spark UI without setting up a Spark History Server
-
-
-
-Author
-@jstephan 
-- 2
-- 0.3hrs
-- edited
-- Last Monday at 5:08 PM
-
-
-
-
-----------
-
-
-
-
-
-Integrating Traditional Cloud Development With Salesforce
-
-
-Author @johnjvester
-- 1
-- 0.3hrs
-- edited
-- Last Tuesday at 9:23 PM
-
-
-
-----------
-
-
-Editors
-
-- Amy Tom
-
-- Hackerhodl
-
-- Natasha
-
-- David
-
-- Kien
-
-- Linh
-
-- Arthur.tkachenko
-
-- Storm
-
-- Austin
-
-- Dane
-
-- RichardJohnn
-
-- Limarc
-
-- Rianke
-
-----
-
-
-Writer Type
-
-- published 60
-
-- top-writer 28
-
-- brand 20
-
-
-
-Status
-
-- edited 81
-
-- submitted 67
-
-- rejected 3262
-- REPOST
-
----
-
-
-
-Tags
-
-- bitcoin 10
-
-- cryptocurrency 10
-
-- software-development 9
-
-- programming 7
-
-- blockchain 6
-
-- startup 6
-
-- web-development 6
-
-- artificial-intelligence 5
-
-- devops 5
-
-- javascript 5
-
-- aws 4
-
-- coding 4
-
-- entrepreneurship 4
-
-- marketing 4
-
-- mobile-app-development 4
-
-
-
-============
-
-
-### Story Statuses
-
-![Newsletters(3)](https://user-images.githubusercontent.com/1469198/103110951-53ab5f00-4650-11eb-97fc-27d31445dcb2.png)
-
-
-html structure statuses:
-```
-<span class="edited">edited</span>
-<span class="submited">submited</span>
-<span class="rejected">rejected</span>
-<span class="published">published</span>
-<span class="sheduled">sheduled</span>
-<span class="empty">empty tag</span>
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
