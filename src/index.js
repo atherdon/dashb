@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import Router from './Router';
+import Router from './pages/Router';
 import 'antd/dist/antd.css';
 import './scss/style.scss';
 
