@@ -1,13 +1,13 @@
 const topAutors = [
   {
     "Draft url": "https://app.hackernoon.com/drafts/4E6A2NsOCdVtUSOvZ0rz",
-    "": "",
-    v: "",
-    email: "",
+    "": "test",
+    v: "test",
+    email: "test@test.com",
     Published: "TRUE",
     Added: "",
     Editted: 31.08,
-    Published__1: 18.09,
+    Published__1: "rejected 19.09",
     "Avg time story": 18,
     "Avg time ALL story": 13,
   },
