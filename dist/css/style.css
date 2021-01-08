@@ -29986,6 +29986,7 @@ div.ant-typography-edit-content.ant-typography-rtl {
   padding: 20px;
   width: 100%;
   height: 100vh;
+  max-width: 700px;
   font-family: "JBM-Regular";
 }
 
@@ -30038,6 +30039,16 @@ div.ant-typography-edit-content.ant-typography-rtl {
 
 .subs-form__text {
   text-align: center;
+}
+
+.subs-form__text.left {
+  font-size: 16px;
+  text-align: left;
+}
+
+.subs-form__text.strong {
+  font-weight: 700;
+  font-size: 24px;
 }
 
 .subs-form__inputs {
@@ -30185,6 +30196,11 @@ div.ant-typography-edit-content.ant-typography-rtl {
   -o-transition: 0.1s ease-in-out;
   transition: 0.1s ease-in-out;
   cursor: pointer;
+}
+
+.subs-form__btn.unsubscribe {
+  margin-top: 25px;
+  padding: 10px 20px;
 }
 
 .subs-form__btn:hover {
