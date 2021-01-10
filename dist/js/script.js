@@ -120,7 +120,7 @@ function insertData() {
 		//console.log(data[i].link);
 
 		insCols += `
-		<col style="width: ${dataHead[i].colWidth}px; min-width: 100px;">
+		<col style="width: ${dataHead[i].colWidth}px;">
 		`;
 		insColsNames += `
 		<th class="ant-table-cell">${dataHead[i].colName}</th>
