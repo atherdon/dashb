@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" sizes="192x192" href="img/icons/192x192.png">
+	<link rel="shortcut icon" href="img/icons/192x192.png" type="image/png" />
+	<link rel="apple-touch-icon" href="img/icons/192x192.png" type="image/png" />
+	<link rel="stylesheet" href="css/style.min.css">
+	<title></title>
+	<style>
+		.steps-content {
+			margin-top: 16px;
+			border: 1px dashed #e9e9e9;
+			border-radius: 2px;
+			padding-top: 80px;
+			min-height: 200px;
+			text-align: center;
+			background-color: #fafafa;
+		}
+
+		.steps-action {
+			margin-top: 24px;
+		}
+
+		[data-theme="dark"] .steps-content {
+			margin-top: 16px;
+			border: 1px dashed #303030;
+			padding-top: 80px;
+			color: rgba(255, 255, 255, 0.65);
+			background-color: rgba(255, 255, 255, 0.04);
+		}
+	</style>
+
+
+</head>
+
+<body>
+
+	<div class="table">
+
+		<div class="ant-table-wrapper">
+			<div class="ant-spin-nested-loading">
+				<div class="ant-spin-container">
+					<div class="ant-table ant-table-fixed-column ant-table-scroll-horizontal">
+						<div class="ant-table-container">
+							<div class="ant-table-header">
+								<table style="table-layout: fixed; min-width: 100%;">
+									<colgroup></colgroup>
+									<thead class="ant-table-thead">
+										<tr>
+
+										</tr>
+									</thead>
+								</table>
+							</div>
+
+							<div class="ant-table-body" style="overflow: auto scroll; height: 700px;">
+								<table style="table-layout: fixed; min-width: 100%;">
+									<colgroup></colgroup>
+									<tbody class="ant-table-tbody">
+									</tbody>
+								</table>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<ul class="ant-pagination ant-table-pagination ant-table-pagination-right" unselectable="unselectable">
+					<li title="Previous Page" class="ant-pagination-prev ant-pagination-disabled" aria-disabled="true">
+						<button class="ant-pagination-item-link" type="button" tabindex="-1" disabled="">
+							<span role="img" aria-label="left" class="anticon anticon-left">
+								<svg viewBox="64 64 896 896" focusable="false" data-icon="left" width="1em" height="1em"
+									fill="currentColor" aria-hidden="true">
+									<path
+										d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 000 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z">
+									</path>
+								</svg>
+							</span>
+						</button>
+					</li>
+					<li title="1" class="ant-pagination-item ant-pagination-item-1 ant-pagination-item-active" tabindex="0">
+						<a rel="nofollow">1</a>
+					</li>
+					<li title="2" class="ant-pagination-item ant-pagination-item-2" tabindex="0">
+						<a rel="nofollow">2</a>
+					</li>
+					<li title="Next Page" class="ant-pagination-next ant-pagination-disabled" aria-disabled="true">
+						<button class="ant-pagination-item-link" type="button" tabindex="-1" disabled="">
+							<span role="img" aria-label="right" class="anticon anticon-right">
+								<svg viewBox="64 64 896 896" focusable="false" data-icon="right" width="1em" height="1em"
+									fill="currentColor" aria-hidden="true">
+									<path
+										d="M765.7 486.8L314.9 134.7A7.97 7.97 0 00302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 000-50.4z">
+									</path>
+								</svg>
+							</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	</div>
+
+	<script>
+
+
+		var titlePage = "Search appearence | hackernoon table";
+
+		var dataHead = [
+			{
+				colWidth: 200,
+				colName: "Search Appearance"
+			},
+			{
+				colWidth: 200,
+				colName: "Clicks"
+			},
+			{
+				colWidth: 200,
+				colName: "Impressions"
+			},
+			{
+				colWidth: 200,
+				colName: "CTR"
+			},
+			{
+				colWidth: 200,
+				colName: "Position"
+			},
+
+		];
+
+		var dataRows = [
+			{
+				"SearchAppearance": "Videos",
+				"Clicks": 13543,
+				"Impressions": 518000,
+				"CTR": "2.61%",
+				"Position": 13.27
+			},
+			{
+				"SearchAppearance": "Rich results",
+				"Clicks": 2616,
+				"Impressions": 93641,
+				"CTR": "2.79%",
+				"Position": 2.34
+			},
+			{
+				"SearchAppearance": "Web Light results",
+				"Clicks": 2370,
+				"Impressions": 52997,
+				"CTR": "4.47%",
+				"Position": 8.79
+			},
+			{
+				"SearchAppearance": "Android App",
+				"Clicks": 1571,
+				"Impressions": 18467,
+				"CTR": "8.51%",
+				"Position": 10.48
+			}
+
+		];
+
+		var insRows = "";
+
+		console.log(dataRows);
+		for (i = 0; i < dataRows.length; i++) {
+
+			insRows += `
+				<tr class="ant-table-row">
+					<td class="ant-table-cell">
+						${dataRows[i].SearchAppearance}
+						
+					</td>
+					<td class="ant-table-cell">
+						${dataRows[i].Clicks}
+					</td>
+
+					<td class="ant-table-cell">
+						${dataRows[i].Impressions}
+					</td>
+					<td class="ant-table-cell">
+						${dataRows[i].CTR}
+					</td>
+					<td class="ant-table-cell">
+						${dataRows[i].Position}
+					</td>
+					
+				</tr>
+		`;
+		}
+
+	</script>
+
+
+	<script src="js/libs.min.js"></script>
+
+	<script src="js/script.min.js"></script>
+</body>
+
+</html>
