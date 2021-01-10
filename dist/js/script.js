@@ -113,8 +113,7 @@ document.addEventListener('keydown', function (e) {
 function insertData() {
 
 	var insCols = "",
-		insColsNames = "",
-		insRows = "";
+		insColsNames = "";
 
 	for (i = 0; i < dataHead.length; i++) {
 
@@ -126,28 +125,6 @@ function insertData() {
 		insColsNames += `
 		<th class="ant-table-cell">${dataHead[i].colName}</th>
 		`;
-	}
-
-	for (i = 0; i < dataRows.length; i++) {
-		insRows += `
-		<tr class="ant-table-row">
-			<td class="ant-table-cell">
-				${dataRows[i].Device}
-			</td>
-			<td class="ant-table-cell">
-				${dataRows[i].Clicks}
-			</td>
-			<td class="ant-table-cell">
-				${dataRows[i].Impressions}
-			</td>
-			<td class="ant-table-cell">
-				${dataRows[i].CTR}
-			</td>
-			<td class="ant-table-cell">
-				${dataRows[i].Position}
-			</td>
-		</tr>
-		`
 	}
 
 	$('colgroup').html(insCols);
