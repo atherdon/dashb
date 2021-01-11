@@ -110,7 +110,28 @@ document.addEventListener('keydown', function (e) {
 	}
 });
 
+function insertData() {
 
+	var insCols = "",
+		insColsNames = "";
+
+	for (i = 0; i < dataHead.length; i++) {
+
+		//console.log(data[i].link);
+
+		insCols += `
+		<col style="width: ${dataHead[i].colWidth}px;">
+		`;
+		insColsNames += `
+		<th class="ant-table-cell">${dataHead[i].colName}</th>
+		`;
+	}
+
+	$('colgroup').html(insCols);
+	$('.ant-table-thead tr').html(insColsNames);
+	$('.ant-table-tbody').html(insRows);
+
+}
 
 
 jQuery(function ($) {
@@ -133,6 +154,19 @@ jQuery(function ($) {
 			$('.burger').toggleClass('burger-active');
 			$('.nav-header').toggleClass('nav-header__active');
 		});
+
+
+		if (typeof dataHead !== 'undefined' && dataHead) {
+			
+			insertData();
+
+			$('title').html(titlePage);
+		} else {
+			$('.ant-table-thead tr').html("<h1>Ops! <br> I don't find data!</h1>");
+		}
+
+
+		
 	});
 
 });

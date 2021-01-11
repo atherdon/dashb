@@ -91,3 +91,46 @@ a {
 		margin-bottom: 10px;
 	}
 }
+
+.goodbye {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+	color: $white;
+	background-color: $bittersweet;
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 20px;
+		width: 100%;
+		height: 100%;
+		max-width: 700px;
+		font-family: "JBM-Regular";
+
+		p {
+			font-weight: 700;
+			font-size: 22px;
+			text-align: center;
+
+			@media only screen and (max-width: 320px) {
+				font-size: 18px;
+			}
+		}
+	}
+
+	&__img {
+		margin-bottom: 20px;
+		max-width: 400px;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
