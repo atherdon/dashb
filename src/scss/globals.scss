@@ -1,0 +1,93 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "JBM-Regular";
+	font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	//justify-content: center;
+	width: 100%;
+	height: 100%;
+	// margin: 0 auto;
+	// width: 980px;
+}
+
+.calendar {
+	padding: 42px 24px 50px;
+}
+
+.steps {
+	padding: 40px;
+}
+
+.table {
+	padding: 0 20px;
+}
+
+.cards {
+	margin: 0 auto;
+	// padding: 20px;
+	width: 980px;
+	
+}
+
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	outline: none;
+	border: 1px solid $cod-gray;
+	padding: 0 45px;
+	font-size: 20px;
+	line-height: 40px;
+	color: $cod-gray;
+	cursor: pointer;
+
+	&:hover {
+		border: 1px solid $green-darken;
+		color: $green-darken;
+		transition: all 0.3s ease 0s;
+	}
+}
+
+.modal-btns {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	margin-top: 10px;
+	width: 980px;
+
+	a {
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
+}
