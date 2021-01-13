@@ -3,22 +3,9 @@ import { Steps as AntDSteps, Button } from "antd";
 
 const { Step } = AntDSteps;
 
-const steps = [
-  {
-    title: "First",
-    content: "First-content",
-  },
-  {
-    title: "Second",
-    content: "Second-content",
-  },
-  {
-    title: "Last",
-    content: "Last-content",
-  },
-];
 
-const Steps = () => {
+
+const Steps = ({steps}) => {
   const [current, setCurrent] = React.useState(0);
 
   const next = () => {
