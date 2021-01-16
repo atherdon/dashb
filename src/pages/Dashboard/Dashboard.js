@@ -1,12 +1,7 @@
 import React from 'react';
 import { Card, Row, Col } from 'antd';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-
-const StyledCards = styled.div`
-  max-width: 900px;
-  margin: 0 auto;
-`;
+import { StyledCards } from './styles';
 
 const Dashboard = () => {
   return (

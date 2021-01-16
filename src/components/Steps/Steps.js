@@ -4,7 +4,7 @@ import { Steps as AntDSteps, Button } from 'antd';
 const { Step } = AntDSteps;
 
 const Steps = ({ steps }) => {
-  const [current, setCurrent] = React.useState(0);
+  const [current, setCurrent] = useState(0);
 
   const next = () => {
     setCurrent(current + 1);
