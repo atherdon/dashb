@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
-import Dashboard from "./Dashboard/Dashboard";
-import TOPAuthors from "./TOPAuthors/TOPAuthors";
-import StepsPage from "./StepsPage/StepsPage";
-import styled from "styled-components";
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import Dashboard from './Dashboard/Dashboard';
+import TOPAuthors from './TOPAuthors/TOPAuthors';
+import StepsPage from './StepsPage/StepsPage';
+import styled from 'styled-components';
 
 const Router = () => {
   return (
