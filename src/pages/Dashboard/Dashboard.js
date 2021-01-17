@@ -1,23 +1,14 @@
-import React from "react";
-import { Card, Row, Col } from "antd";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-
-const StyledCards = styled.div`
-  max-width: 900px;
-  margin: 0 auto;
-`;
+import React from 'react';
+import { Card, Row, Col } from 'antd';
+import { Link } from 'react-router-dom';
+import { StyledCards } from './styles';
 
 const Dashboard = () => {
   return (
     <StyledCards>
       <Row justify="space-between" wrap align="middle" gutter={[24, 24]}>
         <Col flex="300px">
-          <Card
-            title="TOP Authors"
-            extra={<Link to="top-authors">More</Link>}
-            hoverable
-          >
+          <Card title="TOP Authors" extra={<Link to="top-authors">More</Link>} hoverable>
             <p>20 stories</p>
             <p>+counter</p>
           </Card>
@@ -75,11 +66,7 @@ const Dashboard = () => {
           </Card>
         </Col>
         <Col flex="300px">
-          <Card
-            title="Keywords"
-            hoverable
-            extra={<Link to="keywords">More</Link>}
-          >
+          <Card title="Keywords" hoverable extra={<Link to="keywords">More</Link>}>
             <p>20 stories</p>
             <p>+counter</p>
           </Card>

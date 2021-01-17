@@ -1,12 +1,10 @@
-import React, { useState } from "react";
-import { Steps as AntDSteps, Button } from "antd";
+import React, { useState } from 'react';
+import { Steps as AntDSteps, Button } from 'antd';
 
 const { Step } = AntDSteps;
 
-
-
-const Steps = ({steps}) => {
-  const [current, setCurrent] = React.useState(0);
+const Steps = ({ steps }) => {
+  const [current, setCurrent] = useState(0);
 
   const next = () => {
     setCurrent(current + 1);
@@ -39,7 +37,7 @@ const Steps = ({steps}) => {
           </Button>
         )}
         {current > 0 && (
-          <Button style={{ margin: "0 8px" }} onClick={() => prev()}>
+          <Button style={{ margin: '0 8px' }} onClick={() => prev()}>
             Previous
           </Button>
         )}

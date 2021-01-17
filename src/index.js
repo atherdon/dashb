@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyles } from './styles/globalStyles';
+import { theme } from './styles/theme';
 import reportWebVitals from './reportWebVitals';
 import Router from './pages/Router';
-import 'antd/dist/antd.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router />
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <Router />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
