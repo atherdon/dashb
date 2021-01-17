@@ -1,13 +1,13 @@
 import React from 'react';
 import { Menu } from 'antd';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
-import Dashboard from './Dashboard';
-import TOPAuthors from './TOPAuthors';
-import StepsPage from './StepsPage';
-import ProgressBar from './ProgressBar';
+import Dashboard from './Dashboard/Dashboard';
+import TOPAuthors from './TOPAuthors/TOPAuthors';
+import StepsPage from './StepsPage/StepsPage';
+import ProgressBar from './ProgressBar/ProgressBar';
+import Brands from './Brands/Brands';
 // Data
 import progressData from 'data/progress';
-import Brands from './Brands';
 
 const Router = () => {
   return (
