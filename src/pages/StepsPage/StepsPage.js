@@ -1,5 +1,5 @@
 import React from 'react';
-import Steps from 'components/Steps';
+import Steps from 'components/Steps/Steps';
 import FirstStep from './Steps/FirstStep';
 
 const steps = [

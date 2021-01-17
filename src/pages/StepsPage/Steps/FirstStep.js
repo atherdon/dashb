@@ -1,6 +1,6 @@
 import { React } from 'react';
-import Table from 'components/Table';
-import topAutors from '../../../data/top-authors';
+import Table from 'components/Table/Table';
+import topAutors from 'data/top-authors';
 import { columns } from './tableColumns';
 
 const FirstStep = () => {

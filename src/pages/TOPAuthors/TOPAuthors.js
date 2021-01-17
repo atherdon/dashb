@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Table from 'components/Table';
+import Table from 'components/Table/Table';
 import topAutors from 'data/top-authors';
 import { columns } from './tableColumns';
 
