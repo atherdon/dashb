@@ -7,6 +7,7 @@ import StepsPage from './StepsPage';
 import ProgressBar from './ProgressBar';
 // Data
 import progressData from 'data/progress';
+import Brands from './Brands';
 
 const Router = () => {
   return (
@@ -21,6 +22,7 @@ const Router = () => {
       <Switch>
         <Route path="/" exact component={Dashboard} />
         <Route path="/top-authors" component={TOPAuthors} />
+        <Route path="/baa" component={Brands} />
         <Route path="/steps-page" component={StepsPage} />
         <Route
           path="/progress-bar"
