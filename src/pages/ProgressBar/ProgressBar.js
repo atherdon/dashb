@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Row, Col, Progress, Typography } from 'antd';
 
-const { Text } = Typography;
+const { Text, Title } = Typography;
 
 const ProgressBar = ({ data }) => {
   const [percentAvg, setPercentAvg] = useState(0);
@@ -36,6 +36,11 @@ const ProgressBar = ({ data }) => {
             <Text strong>Next goal 280(40 stories per day)</Text>
             <Progress percent={percentNext} />
           </Row>
+        </Col>
+      </Row>
+      <Row>
+        <Col xs={{ span: 22, offset: 1 }} lg={{ span: 12, offset: 6 }}>
+          <Title level={2}>Editors</Title>
         </Col>
       </Row>
     </>
