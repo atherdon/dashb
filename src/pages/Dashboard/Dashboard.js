@@ -8,13 +8,13 @@ const Dashboard = () => {
     <StyledCards>
       <Row justify="space-between" wrap align="middle" gutter={[24, 24]}>
         <Col flex="300px">
-          <Card title="TOP Authors" extra={<Link to="top-authors">More</Link>} hoverable>
+          <Card title="TOP Authors" extra={<Link to="/top-authors">More</Link>} hoverable>
             <p>20 stories</p>
             <p>+counter</p>
           </Card>
         </Col>
         <Col flex="300px">
-          <Card title="BAA" hoverable>
+          <Card title="BAA" extra={<Link to="/baa">More</Link>} hoverable>
             <p>20 stories</p>
             <p>+counter</p>
           </Card>
