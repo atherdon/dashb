@@ -3,7 +3,7 @@ import { Steps as AntDSteps, Button } from 'antd';
 
 const { Step } = AntDSteps;
 
-const Steps = ({ steps }) => {
+export const Steps = ({ steps }) => {
   const [current, setCurrent] = useState(0);
 
   const next = () => {
@@ -45,5 +45,3 @@ const Steps = ({ steps }) => {
     </>
   );
 };
-
-export default Steps;

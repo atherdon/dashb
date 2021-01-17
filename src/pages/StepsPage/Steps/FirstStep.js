@@ -1,5 +1,5 @@
 import { React } from 'react';
-import Table from 'components/Table/Table';
+import { Table } from 'components';
 import topAutors from 'data/top-authors';
 import { columns } from './tableColumns';
 
