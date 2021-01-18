@@ -6,6 +6,7 @@ import TOPAuthors from './TOPAuthors/TOPAuthors';
 import StepsPage from './StepsPage/StepsPage';
 import ProgressBar from './ProgressBar/ProgressBar';
 import Brands from './Brands/Brands';
+import Keywords from './Keywords/Keywords';
 // Data
 import progressData from 'data/progress';
 
@@ -30,6 +31,7 @@ const Router = () => {
           path="/progress-bar"
           component={(props) => <ProgressBar {...props} data={progressData} />}
         />
+        <Route path="/keywords" component={Keywords} />
       </Switch>
     </BrowserRouter>
   );
