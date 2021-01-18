@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Row, Col, Progress, Typography } from 'antd';
-import Table from 'components/Table/Table';
+import { Table } from 'components';
 import { columns } from './tableColumns';
 import editors from 'data/editors';
 

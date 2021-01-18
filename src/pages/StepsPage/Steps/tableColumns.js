@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tag } from 'antd';
+import { Tag, Checkbox } from 'antd';
 
 export const columns = [
   {
@@ -28,12 +28,7 @@ export const columns = [
     title: 'Published',
     dataIndex: 'Published',
     key: 'published',
-    render: (item) =>
-      item && (
-        <Tag color={item.toLowerCase() === 'true' ? 'green' : 'red'} key={item}>
-          {item.toUpperCase()}
-        </Tag>
-      )
+    render: (item) => item && <Checkbox checked={item.toLowerCase() === 'true' ? true : false} />
   },
   {
     title: 'Added',

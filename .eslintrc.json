@@ -25,7 +25,7 @@
     "plugin:prettier/recommended" // Make this the last element so prettier config overrides other formatting rules
   ],
   "rules": {
-    "prettier/prettier": ["warn", {"endOfLine":"auto"}, { "usePrettierrc": true }],
+    "prettier/prettier": ["warn", { "usePrettierrc": true }],
     "react/prop-types": 0,
     "react/display-name": 0,
     "jsx-a11y/anchor-is-valid": 0,
