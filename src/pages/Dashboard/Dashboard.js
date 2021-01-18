@@ -22,6 +22,7 @@ const Dashboard = () => {
         <Col flex="300px">
           <Card title="Featured TOP Stories" hoverable>
             <p>desc</p>
+            <p>desc</p>
           </Card>
         </Col>
         <Col flex="300px">
