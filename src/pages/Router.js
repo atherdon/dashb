@@ -6,18 +6,21 @@ import TOPAuthors from './TOPAuthors/TOPAuthors';
 import StepsPage from './StepsPage/StepsPage';
 import ProgressBar from './ProgressBar/ProgressBar';
 import Brands from './Brands/Brands';
+import Keywords from './Keywords/Keywords';
 // Data
 import progressData from 'data/progress';
 
 const Router = () => {
   return (
     <BrowserRouter>
-      <div>
-        <Link to="/">Dashboard</Link>
-      </div>
-      <div>
-        <Link to="/progress-bar">Progress Bar</Link>
-      </div>
+      <Menu mode="horizontal">
+        <Menu.Item>
+          <Link to="/">Dashboard</Link>
+        </Menu.Item>
+        <Menu.Item>
+          <Link to="/progress-bar">Progress Bar</Link>
+        </Menu.Item>
+      </Menu>
 
       <Switch>
         <Route path="/" exact component={Dashboard} />
@@ -28,6 +31,7 @@ const Router = () => {
           path="/progress-bar"
           component={(props) => <ProgressBar {...props} data={progressData} />}
         />
+        <Route path="/keywords" component={Keywords} />
       </Switch>
     </BrowserRouter>
   );
