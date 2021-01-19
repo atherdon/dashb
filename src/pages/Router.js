@@ -7,6 +7,7 @@ import StepsPage from './StepsPage/StepsPage';
 import ProgressBar from './ProgressBar/ProgressBar';
 import Brands from './Brands/Brands';
 import Keywords from './Keywords/Keywords';
+import Expanded from './Expanded/Expanded';
 // Data
 import progressData from 'data/progress';
 
@@ -20,6 +21,9 @@ const Router = () => {
         <Menu.Item>
           <Link to="/progress-bar">Progress Bar</Link>
         </Menu.Item>
+        <Menu.Item>
+          <Link to="/expanded">Expanded</Link>
+        </Menu.Item>
       </Menu>
 
       <Switch>
@@ -32,6 +36,7 @@ const Router = () => {
           component={(props) => <ProgressBar {...props} data={progressData} />}
         />
         <Route path="/keywords" component={Keywords} />
+        <Route path="/expanded" component={Expanded} />
       </Switch>
     </BrowserRouter>
   );
