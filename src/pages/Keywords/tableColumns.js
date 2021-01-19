@@ -27,4 +27,4 @@ export const tableColumns = (columnName) => {
     }
   ];
   return columns;
-}
+};
