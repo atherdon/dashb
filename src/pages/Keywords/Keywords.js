@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Row, Col, Typography } from 'antd';
 import DropdownFilter from './DropdownFilter/DropdownFilter';
 import SearchInput from './SearchInput/SearchInput';
@@ -16,65 +16,84 @@ const { Title } = Typography;
 
 const Keywords = () => {
   const [keyword, setKeyword] = useState('Device');
+  const [dataSource, setDataSource] = useState(null);
   const columns = tableColumns(keyword);
 
-  let dataSource;
-  switch (keyword) {
-    case 'Device': {
-      dataSource = devices.map((item, index) => {
-        return {
-          key: index,
-          ...item
-        };
-      });
-      break;
+  useEffect(() => {
+    switch (keyword) {
+      case 'Device': {
+        const dataSource = devices.map((item, index) => {
+          return {
+            key: index,
+            ...item
+          };
+        });
+        setDataSource(dataSource);
+        break;
+      }
+      case 'Date': {
+        const dataSource = clicks.map((item, index) => {
+          return {
+            key: index,
+            ...item
+          };
+        });
+        setDataSource(dataSource);
+        break;
+      }
+      case 'Country': {
+        const dataSource = countries.map((item, index) => {
+          return {
+            key: index,
+            ...item
+          };
+        });
+        setDataSource(dataSource);
+        break;
+      }
+      case 'Page': {
+        const dataSource = pages.map((item, index) => {
+          return {
+            key: index,
+            ...item
+          };
+        });
+        setDataSource(dataSource);
+        break;
+      }
+      case 'Query': {
+        const dataSource = queries.map((item, index) => {
+          return {
+            key: index,
+            ...item
+          };
+        });
+        setDataSource(dataSource);
+        break;
+      }
+      case 'Search Appearance': {
+        const dataSource = appearance.map((item, index) => {
+          return {
+            key: index,
+            ...item
+          };
+        });
+        setDataSource(dataSource);
+        break;
+      }
     }
-    case 'Date': {
-      dataSource = clicks.map((item, index) => {
-        return {
-          key: index,
-          ...item
-        };
-      });
-      break;
-    }
-    case 'Country': {
-      dataSource = countries.map((item, index) => {
-        return {
-          key: index,
-          ...item
-        };
-      });
-      break;
-    }
-    case 'Page': {
-      dataSource = pages.map((item, index) => {
-        return {
-          key: index,
-          ...item
-        };
-      });
-      break;
-    }
-    case 'Query': {
-      dataSource = queries.map((item, index) => {
-        return {
-          key: index,
-          ...item
-        };
-      });
-      break;
-    }
-    case 'Search Appearance': {
-      dataSource = appearance.map((item, index) => {
-        return {
-          key: index,
-          ...item
-        };
-      });
-      break;
-    }
-  }
+  }, [keyword])
+
+  console.log(dataSource);
+
+  const handlerSearch = (searchText) => {
+    const filteredEvents = dataSource.filter((item) => {
+      const title = item[keyword].toLowerCase();
+      return title.includes(searchText);
+    });
+
+    setDataSource(filteredEvents);
+  };
 
   return (
     <>
@@ -86,7 +105,7 @@ const Keywords = () => {
           <DropdownFilter setKeyword={setKeyword} />
         </Col>
         <Col pull={1}>
-          <SearchInput />
+          <SearchInput onSearch={handlerSearch} />
         </Col>
       </Row>
       <Row>
