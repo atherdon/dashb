@@ -82,7 +82,7 @@ const Keywords = () => {
         break;
       }
     }
-  }, [keyword])
+  }, [keyword]);
 
   console.log(dataSource);
 
