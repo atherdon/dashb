@@ -4,7 +4,6 @@ import { DownOutlined } from '@ant-design/icons';
 
 const DropdownFilter = ({ setKeyword }) => {
   const changeHandler = (event) => {
-    console.log(event.key);
     setKeyword(event.key);
   };
 
