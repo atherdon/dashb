@@ -16,7 +16,8 @@ export const columns = [
   {
     title: 'V',
     dataIndex: 'v',
-    key: 'v'
+    key: 'v',
+    render: () => <Checkbox />
   },
   {
     title: 'Email',
