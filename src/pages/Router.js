@@ -1,6 +1,11 @@
 import React from 'react';
-import { Menu, Space, Row, Col } from 'antd';
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import { Menu, Row, Col } from 'antd';
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+  Link,
+} from 'react-router-dom';
 import Dashboard from './Dashboard/Dashboard';
 import TOPAuthors from './TOPAuthors/TOPAuthors';
 import StepsPage from './StepsPage/StepsPage';
@@ -13,9 +18,11 @@ import Expanded from './Expanded/Expanded';
 
 // Data
 import progressData from 'data/progress';
+import { Breadcrumbs } from 'components';
 
 const Router = () => {
-  // const { loginWithRedirect, logout } = useAuth0();
+  // const { loginWithRedirect, logout } = useAuth0();  
+
   return (
     <BrowserRouter>
       <Menu mode="horizontal" style={{ marginBottom: '20px' }}>
@@ -26,6 +33,12 @@ const Router = () => {
           <Link to="/progress-bar">Progress Bar</Link>
         </Menu.Item>
       </Menu>
+
+      <Row style={{ marginBottom: '20px', marginLeft: '10px' }}>
+        <Col>
+          <Breadcrumbs />
+        </Col>
+      </Row>
 
       <Switch>
         <Row justify="center">
