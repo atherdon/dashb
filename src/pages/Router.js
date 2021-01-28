@@ -8,37 +8,31 @@ import ProgressBar from './ProgressBar/ProgressBar';
 import Brands from './Brands/Brands';
 import Keywords from './Keywords/Keywords';
 import Expanded from './Expanded/Expanded';
-import Home from './Home/Home';
-import { useAuth0 } from '@auth0/auth0-react';
+// import Home from './Home/Home';
+// import { useAuth0 } from '@auth0/auth0-react';
 
 // Data
 import progressData from 'data/progress';
 
 const Router = () => {
-  const { loginWithRedirect, logout } = useAuth0();
+  // const { loginWithRedirect, logout } = useAuth0();
   return (
     <BrowserRouter>
       <Menu mode="horizontal" style={{ marginBottom: '20px' }}>
         <Menu.Item>
-          <Link to="/dashboard">Dashboard</Link>
+          <Link to="/">Dashboard</Link>
         </Menu.Item>
         <Menu.Item>
           <Link to="/progress-bar">Progress Bar</Link>
-        </Menu.Item>
-        <Menu.Item>
-          <button onClick={() => loginWithRedirect()}>Log In</button>
-        </Menu.Item>
-        <Menu.Item>
-          <button onClick={() => logout()}>Logout</button>
         </Menu.Item>
       </Menu>
 
       <Switch>
         <Row justify="center">
           <Col span={24}>
-            <Route path="/" exact component={Home} />
+            {/* <Route path="/" exact component={Home} /> */}
 
-            <Route path="/dashboard" component={Dashboard} />
+            <Route path="/" exact component={Dashboard} />
             <Route path="/top-authors" component={TOPAuthors} />
             <Route path="/baa" component={Brands} />
             <Route path="/steps-page" component={StepsPage} />

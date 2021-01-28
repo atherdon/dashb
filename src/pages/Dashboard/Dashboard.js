@@ -2,7 +2,6 @@ import React from 'react';
 import { Card, Row, Col } from 'antd';
 import { Link } from 'react-router-dom';
 import { StyledCards } from './styles';
-import { withAuthenticationRequired } from '@auth0/auth0-react';
 
 const Dashboard = () => {
   return (
@@ -78,6 +77,4 @@ const Dashboard = () => {
   );
 };
 
-export default withAuthenticationRequired(Dashboard, {
-  onRedirecting: () => <div>Loading</div>
-});
+export default Dashboard;
