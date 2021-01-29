@@ -25,6 +25,9 @@ const Router = () => {
         <Menu.Item>
           <Link to="/progress-bar">Progress Bar</Link>
         </Menu.Item>
+        <Menu.Item>
+          <Link to="/expanded">Expanded</Link>
+        </Menu.Item>
       </Menu>
 
       <Switch>
