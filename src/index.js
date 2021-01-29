@@ -5,18 +5,22 @@ import { GlobalStyles } from './styles/globalStyles';
 import { theme } from './styles/theme';
 import reportWebVitals from './reportWebVitals';
 import Router from './pages/Router';
-// import { Auth0Provider } from '@auth0/auth0-react';
+import { Auth0Provider } from '@auth0/auth0-react';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
-  // <Auth0Provider
-  //   domain={process.env.REACT_APP_DOMAIN}
-  //   clientId={process.env.REACT_APP_CLIENT_ID}
-  //   redirectUri={window.location.origin}>
-  <ThemeProvider theme={theme}>
-    <GlobalStyles />
-    <Router />
-  </ThemeProvider>,
-  // </Auth0Provider>,
+  <BrowserRouter>
+    <Auth0Provider
+      domain={process.env.REACT_APP_DOMAIN}
+      clientId={process.env.REACT_APP_CLIENT_ID}
+      redirectUri={window.location.origin}>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <Router />
+      </ThemeProvider>
+    </Auth0Provider>
+  </BrowserRouter>,
+
   document.getElementById('root')
 );
 

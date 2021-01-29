@@ -1,6 +1,8 @@
 import React from 'react';
-import { Menu, Space, Row, Col } from 'antd';
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import { Menu, Row, Col, Layout } from 'antd';
+import { Switch, Link } from 'react-router-dom';
+import { useAuth0 } from '@auth0/auth0-react';
+
 import Dashboard from './Dashboard/Dashboard';
 import TOPAuthors from './TOPAuthors/TOPAuthors';
 import StepsPage from './StepsPage/StepsPage';
@@ -8,47 +10,58 @@ import ProgressBar from './ProgressBar/ProgressBar';
 import Brands from './Brands/Brands';
 import Keywords from './Keywords/Keywords';
 import Expanded from './Expanded/Expanded';
-// import Home from './Home/Home';
-// import { useAuth0 } from '@auth0/auth0-react';
-
+import ProtectedRoute from 'auth/ProtectedRoute';
+import { AuthButton } from 'components';
 // Data
 import progressData from 'data/progress';
+import styled from 'styled-components';
+
+const { Header, Content } = Layout;
+
+const StyledContent = styled(Content)`
+  padding: 40px 60px;
+`;
 
 const Router = () => {
-  // const { loginWithRedirect, logout } = useAuth0();
+  const { logout, user } = useAuth0();
+
   return (
-    <BrowserRouter>
-      <Menu mode="horizontal" style={{ marginBottom: '20px' }}>
-        <Menu.Item>
-          <Link to="/">Dashboard</Link>
-        </Menu.Item>
-        <Menu.Item>
-          <Link to="/progress-bar">Progress Bar</Link>
-        </Menu.Item>
-        <Menu.Item>
-          <Link to="/expanded">Expanded</Link>
-        </Menu.Item>
-      </Menu>
-
-      <Switch>
-        <Row justify="center">
-          <Col span={24}>
-            {/* <Route path="/" exact component={Home} /> */}
-
-            <Route path="/" exact component={Dashboard} />
-            <Route path="/top-authors" component={TOPAuthors} />
-            <Route path="/baa" component={Brands} />
-            <Route path="/steps-page" component={StepsPage} />
-            <Route
-              path="/progress-bar"
-              component={(props) => <ProgressBar {...props} data={progressData} />}
-            />
-            <Route path="/keywords" component={Keywords} />
-            <Route path="/expanded" component={Expanded} />
+    <Layout>
+      <Header>
+        <Row justify="space-between" align="middle">
+          <Col flex="500px">
+            <Menu theme="dark" mode="horizontal">
+              <Menu.Item>
+                <Link to="/">Dashboard</Link>
+              </Menu.Item>
+              <Menu.Item>
+                <Link to="/progress-bar">Progress Bar</Link>
+              </Menu.Item>
+              <Menu.Item>
+                <Link to="/expanded">Expanded</Link>
+              </Menu.Item>
+            </Menu>
+          </Col>
+          <Col>
+            <AuthButton user={user} logout={logout} />
           </Col>
         </Row>
-      </Switch>
-    </BrowserRouter>
+      </Header>
+      <StyledContent>
+        <Switch>
+          <ProtectedRoute path="/" exact component={Dashboard} />
+          <ProtectedRoute path="/top-authors" component={TOPAuthors} />
+          <ProtectedRoute path="/baa" component={Brands} />
+          <ProtectedRoute path="/steps-page" component={StepsPage} />
+          <ProtectedRoute
+            path="/progress-bar"
+            component={(props) => <ProgressBar {...props} data={progressData} />}
+          />
+          <ProtectedRoute path="/keywords" component={Keywords} />
+          <ProtectedRoute path="/expanded" component={Expanded} />
+        </Switch>
+      </StyledContent>
+    </Layout>
   );
 };
 
