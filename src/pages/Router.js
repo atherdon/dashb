@@ -21,7 +21,7 @@ import progressData from 'data/progress';
 import { Breadcrumbs } from 'components';
 
 const Router = () => {
-  // const { loginWithRedirect, logout } = useAuth0();  
+  // const { loginWithRedirect, logout } = useAuth0();
 
   return (
     <BrowserRouter>
