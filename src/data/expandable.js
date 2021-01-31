@@ -1,5 +1,5 @@
-const expandable = [ 
-{
+const expandable = [
+  {
     key: 1,
     name: 'John Brown',
     age: 32,
