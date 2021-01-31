@@ -2,7 +2,7 @@ import React from 'react';
 import { Menu, Row, Col, Layout } from 'antd';
 import { Switch, Link } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
-
+// Components
 import Dashboard from './Dashboard/Dashboard';
 import TOPAuthors from './TOPAuthors/TOPAuthors';
 import StepsPage from './StepsPage/StepsPage';
@@ -11,7 +11,7 @@ import Brands from './Brands/Brands';
 import Keywords from './Keywords/Keywords';
 import Expanded from './Expanded/Expanded';
 import ProtectedRoute from 'auth/ProtectedRoute';
-import { AuthButton } from 'components';
+import { AuthButton, Breadcrumbs } from 'components';
 // Data
 import progressData from 'data/progress';
 import styled from 'styled-components';
@@ -48,6 +48,7 @@ const Router = () => {
         </Row>
       </Header>
       <StyledContent>
+        <Breadcrumbs />
         <Switch>
           <ProtectedRoute path="/" exact component={Dashboard} />
           <ProtectedRoute path="/top-authors" component={TOPAuthors} />
