@@ -1,20 +1,20 @@
 import React from 'react';
 import { Card, Row, Col } from 'antd';
-import { Link } from 'react-router-dom';
 import { StyledCards } from './styles';
+import { TopAuthors, Baa, StepsPage, Keywords } from 'data/links/More/More';
 
 const Dashboard = () => {
   return (
     <StyledCards>
       <Row justify="space-between" wrap align="middle" gutter={[24, 24]}>
         <Col flex="300px">
-          <Card title="TOP Authors" extra={<Link to="/top-authors">More</Link>} hoverable>
+          <Card title="TOP Authors" extra={<TopAuthors />} hoverable>
             <p>20 stories</p>
             <p>+counter</p>
           </Card>
         </Col>
         <Col flex="300px">
-          <Card title="BAA" extra={<Link to="/baa">More</Link>} hoverable>
+          <Card title="BAA" extra={<Baa />} hoverable>
             <p>20 stories</p>
             <p>+counter</p>
           </Card>
@@ -61,13 +61,13 @@ const Dashboard = () => {
           </Card>
         </Col>
         <Col flex="300px">
-          <Card title="Steps" hoverable extra={<Link to="steps-page">More</Link>}>
+          <Card title="Steps" hoverable extra={<StepsPage />}>
             <p>20 stories</p>
             <p>+counter</p>
           </Card>
         </Col>
         <Col flex="300px">
-          <Card title="Keywords" hoverable extra={<Link to="keywords">More</Link>}>
+          <Card title="Keywords" hoverable extra={<Keywords />}>
             <p>20 stories</p>
             <p>+counter</p>
           </Card>
