@@ -10,19 +10,21 @@ import Keywords from './Keywords/Keywords';
 import Expanded from './Expanded/Expanded';
 // Data
 import progressData from 'data/progress';
+// Links
+import { DashboardLink, ProgressBarLink, ExpandedLink } from 'data/links/HeaderLinks/HeaderLinks';
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Menu mode="horizontal" style={{ marginBottom: '20px' }}>
         <Menu.Item>
-          <Link to="/">Dashboard</Link>
+          <DashboardLink />
         </Menu.Item>
         <Menu.Item>
-          <Link to="/progress-bar">Progress Bar</Link>
+          <ProgressBarLink />
         </Menu.Item>
         <Menu.Item>
-          <Link to="/expanded">Expanded</Link>
+          <ExpandedLink />
         </Menu.Item>
       </Menu>
 

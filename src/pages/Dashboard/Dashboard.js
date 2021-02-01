@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Row, Col } from 'antd';
 import { StyledCards } from './styles';
-import { TopAuthors, Baa, StepsPage, Keywords } from 'data/links/More/More';
+import { TopAuthors, Baa, StepsPage, Keywords } from 'data/links/CartMoreLink/CartMoreLink';
 
 const Dashboard = () => {
   return (
