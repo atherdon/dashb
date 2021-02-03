@@ -1,14 +1,14 @@
 import React from 'react';
 import { Card, Row, Col } from 'antd';
 import { StyledCards } from './styles';
-import { carts } from 'data/carts';
+import { cards } from 'data/cards';
 
 const Dashboard = () => {
   return (
     <StyledCards>
       <Row justify="space-between" wrap align="middle" gutter={[24, 24]}>
         {
-          carts.map(Val => (
+          cards.map(Val => (
             <Col flex="300px" key={Val.title}>
               <Card
                 title={Val.title}

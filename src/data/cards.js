@@ -1,7 +1,7 @@
 import React from 'react';
-import { TopAuthors, Baa, StepsPage, Keywords } from 'components/Links/CartMoreLinks/CartMoreLinks';
+import { TopAuthors, Baa, StepsPage, Keywords } from 'components/Links/CardMoreLinks/CardMoreLinks';
 
-const carts = [
+const cards = [
     {
         title: 'TOP Authors',
         hoverable: true,
@@ -129,4 +129,4 @@ const carts = [
     },
 ]
 
-export { carts };
+export { cards };
