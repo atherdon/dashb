@@ -13,7 +13,6 @@ const TOPAutors = () => {
       'Draft url': topAuthorLinks[index]
     };
   });
-  console.log(dataSource)
   return <Table dataSource={dataSource} columns={columns} />;
 };
 
