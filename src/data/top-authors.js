@@ -1,6 +1,6 @@
 const topAutors = [
   {
-    'Draft url': 'https://app.hackernoon.com/drafts/4E6A2NsOCdVtUSOvZ0rz',
+    'Draft url': '',
     '': 'test',
     v: 'test',
     email: 'test@test.com',
@@ -12,7 +12,7 @@ const topAutors = [
     'Avg time ALL story': 13
   },
   {
-    'Draft url': 'https://app.hackernoon.com/drafts/4ub652BZlv0353orv7XU',
+    'Draft url': '',
     '': '',
     v: '',
     email: '',
@@ -24,7 +24,7 @@ const topAutors = [
     'Avg time ALL story': ''
   },
   {
-    'Draft url': 'https://app.hackernoon.com/drafts/eb15VL7EnIszFoqRBy8l',
+    'Draft url': '',
     '': '',
     v: '',
     email: '',
@@ -36,7 +36,7 @@ const topAutors = [
     'Avg time ALL story': ''
   },
   {
-    'Draft url': 'https://app.hackernoon.com/drafts/hgRb7stfgSgbcx3ZmxCV',
+    'Draft url': '',
     '': '',
     v: '',
     email: '',
@@ -48,7 +48,7 @@ const topAutors = [
     'Avg time ALL story': ''
   },
   {
-    'Draft url': 'https://app.hackernoon.com/drafts/rzoXhETN5QsKWUBGvJzh',
+    'Draft url': '',
     '': '',
     v: '',
     email: '',
@@ -60,7 +60,7 @@ const topAutors = [
     'Avg time ALL story': ''
   },
   {
-    'Draft url': 'https://app.hackernoon.com/drafts/csF1Su3jePRMshPwsm8H',
+    'Draft url': '',
     '': '',
     v: '',
     email: '',
@@ -84,7 +84,7 @@ const topAutors = [
   //   "Avg time ALL story": "",
   // },
   {
-    'Draft url': 'https://app.hackernoon.com/drafts/s9JCv15g4vcOIjEWkz1s',
+    'Draft url': '',
     '': '',
     v: '',
     email: '',
@@ -96,7 +96,7 @@ const topAutors = [
     'Avg time ALL story': ''
   },
   {
-    'Draft url': 'https://app.hackernoon.com/drafts/iwwHnFhMqA51NGgCL8FH',
+    'Draft url': '',
     '': '',
     v: '',
     email: '',
@@ -108,7 +108,7 @@ const topAutors = [
     'Avg time ALL story': ''
   },
   {
-    'Draft url': 'https://app.hackernoon.com/drafts/sj0fd4957PYdT8wKP5pP',
+    'Draft url': '',
     '': '',
     v: '',
     email: '',
@@ -132,7 +132,7 @@ const topAutors = [
     'Avg time ALL story': ''
   },
   {
-    'Draft url': 'https://app.hackernoon.com/drafts/VoBVhoTN7mc3avr9nhdt',
+    'Draft url': '',
     '': '',
     v: '',
     email: '',
@@ -144,7 +144,7 @@ const topAutors = [
     'Avg time ALL story': ''
   },
   {
-    'Draft url': 'https://app.hackernoon.com/drafts/szCyStJz1rhO5yIPam9C',
+    'Draft url': '',
     '': '',
     v: '',
     email: '',
@@ -156,7 +156,7 @@ const topAutors = [
     'Avg time ALL story': ''
   },
   {
-    'Draft url': 'https://app.hackernoon.com/drafts/mNqumV6I5aHNSPaXwfE3',
+    'Draft url': '',
     '': '',
     v: '',
     email: '',
@@ -168,7 +168,7 @@ const topAutors = [
     'Avg time ALL story': ''
   },
   {
-    'Draft url': 'https://app.hackernoon.com/drafts/rMgxi9ygF0HnM4QRjn8G',
+    'Draft url': '',
     '': '',
     v: '',
     email: '',
@@ -180,7 +180,7 @@ const topAutors = [
     'Avg time ALL story': ''
   },
   {
-    'Draft url': 'https://app.hackernoon.com/drafts/wi00PIvAgrlswM3BIf02',
+    'Draft url': '',
     '': '',
     v: '',
     email: '',
@@ -192,7 +192,7 @@ const topAutors = [
     'Avg time ALL story': ''
   },
   {
-    'Draft url': 'https://app.hackernoon.com/drafts/zHcZwmzlMtC0U9SsIGQ6',
+    'Draft url': '',
     '': '',
     v: '',
     email: '',
@@ -204,7 +204,7 @@ const topAutors = [
     'Avg time ALL story': ''
   },
   {
-    'Draft url': 'https://app.hackernoon.com/drafts/WqcetiMvNys8iEn4E7n4',
+    'Draft url': '',
     '': '',
     v: '',
     email: '',
@@ -216,7 +216,7 @@ const topAutors = [
     'Avg time ALL story': ''
   },
   {
-    'Draft url': 'https://app.hackernoon.com/drafts/2x4y0Qp3ocsgyKql5Tsg',
+    'Draft url': '',
     '': '',
     v: 'v',
     email: '',
@@ -228,7 +228,7 @@ const topAutors = [
     'Avg time ALL story': ''
   },
   {
-    'Draft url': 'https://app.hackernoon.com/drafts/ymMJWWkuNX6NyPofAxi6',
+    'Draft url': '',
     '': '',
     v: 'v',
     email: '',
@@ -240,7 +240,7 @@ const topAutors = [
     'Avg time ALL story': ''
   },
   {
-    'Draft url': 'https://app.hackernoon.com/drafts/C4Z66vOM2ufq8UstkGsg',
+    'Draft url': '',
     '': '',
     v: 'v',
     email: 'mailto:vinita@techtello.com',
@@ -264,7 +264,7 @@ const topAutors = [
     'Avg time ALL story': ''
   },
   {
-    'Draft url': 'https://app.hackernoon.com/drafts/KQt9R5PTPHlOAFJocTQG',
+    'Draft url': '',
     '': '',
     v: 'v',
     email: 'tanaypant@protonmail.com',
@@ -276,7 +276,7 @@ const topAutors = [
     'Avg time ALL story': ''
   },
   {
-    'Draft url': 'https://app.hackernoon.com/drafts/iacjRAPm5V9UPnbeN5tn',
+    'Draft url': '',
     '': '',
     v: 'v',
     email: 'mailto:momchil@codegiant.io',
@@ -288,7 +288,7 @@ const topAutors = [
     'Avg time ALL story': ''
   },
   {
-    'Draft url': 'https://app.hackernoon.com/drafts/nC3evAvq8j8gm4XWeynX',
+    'Draft url': '',
     '': '',
     v: 'v',
     email: '',
@@ -300,7 +300,7 @@ const topAutors = [
     'Avg time ALL story': ''
   },
   {
-    'Draft url': 'https://app.hackernoon.com/drafts/OxlKvK57m43VmgkVenLk',
+    'Draft url': '',
     '': '',
     v: 'v',
     email: '',
