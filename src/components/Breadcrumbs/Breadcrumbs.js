@@ -5,7 +5,7 @@ import { HomeOutlined } from '@ant-design/icons';
 
 export const Breadcrumbs = () => {
   const location = useLocation();
-  const pathSnippets = location.pathname.split('/').filter(i => i);
+  const pathSnippets = location.pathname.split('/').filter((i) => i);
 
   const extraBreadcrumbItems = pathSnippets.map((_, index) => {
     const url = `${pathSnippets.slice(0, index + 1).join('/')}`;
@@ -21,7 +21,7 @@ export const Breadcrumbs = () => {
       <Link to="/">
         <HomeOutlined />
       </Link>
-    </Breadcrumb.Item>,
+    </Breadcrumb.Item>
   ].concat(extraBreadcrumbItems);
 
   return (
