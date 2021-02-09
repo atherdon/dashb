@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { Table } from 'components';
-import topAutors from 'data/top-authors';
 import { columns } from './tableColumns';
+import { getTopAuthors } from 'store/thunk';
 
 const TOPAutors = () => {
-  const dataSource = topAutors.map((item, index) => {
+  const dispatch = useDispatch();
+  const { topAuthors } = useSelector((state) => ({
+    topAuthors: state.topAuthors
+  }));
+
+  useEffect(() => {
+    dispatch(getTopAuthors());
+  }, []);
+
+  const dataSource = topAuthors.map((item, index) => {
     return {
       key: index,
       ...item
