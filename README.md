@@ -6,6 +6,23 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 `npm i` && `npm start`
 
+## Developing in this repository
+
+main - production branch
+develop - develop branch, don't mess it up with merge requsts commits 
+
+This is 3 ways how you can work here:
+
+1. Create branch locally 
+
+`git branch <name_of_your_new_branch>`
+
+make some changes -> commit -> make git pull origin/master -> publish this branch.
+Create PR in GitHub then click button `squash and merge` this command join all commits into one.
+
+2. you can push directly into develop branch 
+
+commit your changes -> make `git pull --rebase` -> `git push`
 
 ## Available Scripts
 
