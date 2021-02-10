@@ -1,16 +1,15 @@
 import { createGlobalStyle, css } from 'styled-components';
 
-const antdCss = css`
-  ${import('antd/dist/antd.css')}
-`;
-
+// const antdCss = css`
+//   ${import('antd/dist/antd.css')}
+// `;
+/* font-family: ${({ theme }) => theme.font_primary}; */
 export const GlobalStyles = createGlobalStyle`
-  ${antdCss}
 
   body {
     margin: 0;
     padding: 0;
-    font-family: ${({ theme }) => theme.font_primary};
+   
     
   }
 

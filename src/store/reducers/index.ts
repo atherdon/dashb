@@ -4,7 +4,7 @@ const initialState = {
   topAuthors: []
 };
 
-export const rootReducer = (state = initialState, action) => {
+export const rootReducer = (state = initialState, action: any) => {
   const { type, payload } = action;
 
   switch (type) {

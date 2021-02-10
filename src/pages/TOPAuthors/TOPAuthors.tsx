@@ -7,7 +7,7 @@ import { getTopAuthors } from 'store/thunk';
 
 const TOPAutors = () => {
   const dispatch = useDispatch();
-  const { topAuthors } = useSelector((state) => ({
+  const { topAuthors } = useSelector((state: any) => ({
     topAuthors: state.topAuthors
   }));
 
@@ -15,7 +15,7 @@ const TOPAutors = () => {
     dispatch(getTopAuthors());
   }, []);
 
-  const dataSource = topAuthors.map((item, index) => {
+  const dataSource = topAuthors.map((item: any, index: any) => {
     return {
       key: index,
       ...item

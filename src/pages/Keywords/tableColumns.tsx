@@ -1,4 +1,4 @@
-export const tableColumns = (columnName) => {
+export const tableColumns = (columnName: any) => {
   const columns = [
     {
       title: `${columnName}`,

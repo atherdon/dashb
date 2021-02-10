@@ -5,24 +5,24 @@ import SearchInput from './SearchInput/SearchInput';
 import { Table } from 'components';
 import { tableColumns } from './tableColumns';
 // Data
-import devices from 'data/keywords/Devices';
-import clicks from 'data/keywords/Clicks-Position';
-import countries from 'data/keywords/Countries';
-import pages from 'data/keywords/Pages';
-import queries from 'data/keywords/Queries';
-import appearance from 'data/keywords/Appearance';
+import devices from 'data/keywords/Devices.json';
+import clicks from 'data/keywords/Clicks-Position.json';
+import countries from 'data/keywords/Countries.json';
+import pages from 'data/keywords/Pages.json';
+import queries from 'data/keywords/Queries.json';
+import appearance from 'data/keywords/Appearance.json';
 
 const { Title } = Typography;
 
 const Keywords = () => {
   const [keyword, setKeyword] = useState('Device');
-  const [dataSource, setDataSource] = useState(null);
+  const [dataSource, setDataSource] = useState<any>(null);
   const columns = tableColumns(keyword);
 
   useEffect(() => {
     switch (keyword) {
       case 'Device': {
-        const dataSource = devices.map((item, index) => {
+        const dataSource: any = devices.map((item, index) => {
           return {
             key: index,
             ...item
@@ -32,7 +32,7 @@ const Keywords = () => {
         break;
       }
       case 'Date': {
-        const dataSource = clicks.map((item, index) => {
+        const dataSource: any = clicks.map((item, index) => {
           return {
             key: index,
             ...item
@@ -42,7 +42,7 @@ const Keywords = () => {
         break;
       }
       case 'Country': {
-        const dataSource = countries.map((item, index) => {
+        const dataSource: any = countries.map((item, index) => {
           return {
             key: index,
             ...item
@@ -52,7 +52,7 @@ const Keywords = () => {
         break;
       }
       case 'Page': {
-        const dataSource = pages.map((item, index) => {
+        const dataSource: any = pages.map((item, index) => {
           return {
             key: index,
             ...item
@@ -62,7 +62,7 @@ const Keywords = () => {
         break;
       }
       case 'Query': {
-        const dataSource = queries.map((item, index) => {
+        const dataSource: any = queries.map((item, index) => {
           return {
             key: index,
             ...item
@@ -72,7 +72,7 @@ const Keywords = () => {
         break;
       }
       case 'Search Appearance': {
-        const dataSource = appearance.map((item, index) => {
+        const dataSource: any = appearance.map((item, index) => {
           return {
             key: index,
             ...item
@@ -86,8 +86,8 @@ const Keywords = () => {
 
   console.log(dataSource);
 
-  const handlerSearch = (searchText) => {
-    const filteredEvents = dataSource.filter((item) => {
+  const handlerSearch = (searchText: any) => {
+    const filteredEvents = dataSource.filter((item: any) => {
       const title = item[keyword].toLowerCase();
       return title.includes(searchText);
     });
