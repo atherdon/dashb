@@ -10,22 +10,31 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store/store';
 import 'antd/dist/antd.css';
+import { ApolloClient, InMemoryCache, gql, ApolloProvider, HttpLink } from '@apollo/client';
+
+const httpLink = new HttpLink({ uri: process.env.REACT_APP_GRAPHQL_API });
+
+const client = new ApolloClient({
+  link: httpLink,
+  cache: new InMemoryCache()
+});
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
-      <Auth0Provider
-        domain={process.env.REACT_APP_DOMAIN ?? ''}
-        clientId={process.env.REACT_APP_CLIENT_ID ?? ''}
-        redirectUri={window.location.origin}>
-        <ThemeProvider theme={theme}>
-          <GlobalStyles />
-          <Router />
-        </ThemeProvider>
-      </Auth0Provider>
-    </BrowserRouter>
+    <ApolloProvider client={client}>
+      <BrowserRouter>
+        <Auth0Provider
+          domain={process.env.REACT_APP_DOMAIN ?? ''}
+          clientId={process.env.REACT_APP_CLIENT_ID ?? ''}
+          redirectUri={window.location.origin}>
+          <ThemeProvider theme={theme}>
+            <GlobalStyles />
+            <Router />
+          </ThemeProvider>
+        </Auth0Provider>
+      </BrowserRouter>
+    </ApolloProvider>
   </Provider>,
-
   document.getElementById('root')
 );
 

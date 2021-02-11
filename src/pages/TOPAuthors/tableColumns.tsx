@@ -4,19 +4,14 @@ import { Tag, Checkbox } from 'antd';
 export const columns = [
   {
     title: 'Draft url',
-    dataIndex: 'Draft url',
-    key: 'Draft url',
+    dataIndex: 'url',
+    key: 'url',
     render: (text: any) => <a href={text}>{text}</a>
   },
   {
-    title: 'Column B',
-    dataIndex: '',
-    key: 'b'
-  },
-  {
-    title: 'V',
-    dataIndex: 'v',
-    key: 'v',
+    title: 'Is Published',
+    dataIndex: 'isPublished',
+    key: 'isPublished',
     render: () => <Checkbox />
   },
   {
@@ -26,46 +21,54 @@ export const columns = [
     render: (email: any) => <a>{email}</a>
   },
   {
+    title: 'Updated',
+    dataIndex: 'updated',
+    key: 'updated'
+  },
+  // {
+  //   title: 'Published',
+  //   dataIndex: 'Published',
+  //   key: 'published',
+  //   render: (item: any) =>
+  //     item && <Checkbox checked={item.toLowerCase() === 'true' ? true : false} />
+  // },
+  {
+    title: 'Created',
+    dataIndex: 'created',
+    key: 'created'
+  },
+  {
+    title: 'Edited',
+    dataIndex: 'edited',
+    key: 'edited'
+  },
+  {
     title: 'Published',
-    dataIndex: 'Published',
+    dataIndex: 'published',
     key: 'published',
-    render: (item: any) =>
-      item && <Checkbox checked={item.toLowerCase() === 'true' ? true : false} />
-  },
-  {
-    title: 'Added',
-    dataIndex: 'Added',
-    key: 'added'
-  },
-  {
-    title: 'Editted',
-    dataIndex: 'Editted',
-    key: 'editted'
-  },
-  {
-    title: 'Published',
-    dataIndex: 'Published__1',
-    key: 'Published__1',
     render: (item: any) => {
-      item = item.toString().toUpperCase();
+      item = item ? item.toString().toUpperCase() : '';
       const isRejected = item.includes('REJECTED');
       const value = isRejected ? item.replace('REJECTED', '').trim() : item;
+
       return (
-        <>
-          {isRejected && <Tag color="red">REJECTED</Tag>}
-          {value}
-        </>
+        value && (
+          <>
+            {isRejected && <Tag color="red">REJECTED</Tag>}
+            {value}
+          </>
+        )
       );
     }
   },
   {
     title: 'Avg time story',
-    dataIndex: 'Avg time story',
-    key: 'Avg time story'
+    dataIndex: 'avgTimeStory',
+    key: 'avgTimeStory'
   },
   {
     title: 'Avg time ALL story',
-    dataIndex: 'Avg time ALL story',
-    key: 'Avg time ALL story'
+    dataIndex: 'avgAllTimeStory',
+    key: 'avgAllTimeStory'
   }
 ];
