@@ -19,3 +19,7 @@ we'll update it later, so it's fine to save it publicly for now.
 - top-authors. similar to junior editor and contributing editor
 - freelancer
 - managed-account
+
+Добавил в версию 3.3.1
+Конфигурация ролей в src/prisma/config/roles.json
+пока что сделал что он каждый запуск сервера перезаписывает в базе таблицу Role из файла концигураций, потом если потребуется можно в отдельный скрипт вынести, чтобы не рестартить сервер если надо роли поменять.
