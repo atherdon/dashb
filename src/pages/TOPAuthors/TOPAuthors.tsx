@@ -1,31 +1,15 @@
 import React from 'react';
-import { Checkbox } from 'antd';
+import { Checkbox, Spin } from 'antd';
 import { ColumnsType } from 'antd/es/table';
 import moment from 'moment';
 
 import { Table } from 'components';
 import { gql, useQuery } from '@apollo/client';
 import { Author, Query } from 'models/gql';
-
-const GET_MANY_AUTHOR = gql`
-  query {
-    getManyAuthor {
-      id
-      url
-      email
-      isPublished
-      created
-      edited
-      updated
-      published
-      avgTimeStory
-      avgAllTimeStory
-    }
-  }
-`;
+import { useGetManyAuthorQuery } from 'models/gql';
 
 const TOPAutors = () => {
-  const { data } = useQuery<Query>(GET_MANY_AUTHOR);
+  const { data, loading } = useGetManyAuthorQuery();
 
   const DATE_FORMAT = 'MM.DD.YYYY';
   const columns: ColumnsType<Author> = [
@@ -104,14 +88,14 @@ const TOPAutors = () => {
     }
   ];
 
-  const dataSource = data?.getManyAuthor?.map((item) => {
+  const dataSource = data?.getManyAuthor.map((item) => {
     return {
       key: item?.id,
       ...item
     };
   });
 
-  return <Table dataSource={dataSource} columns={columns} />;
+  return loading ? <Spin /> : <Table dataSource={dataSource} columns={columns} />;
 };
 
 export default TOPAutors;

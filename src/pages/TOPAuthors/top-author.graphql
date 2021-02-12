@@ -1,0 +1,14 @@
+query getManyAuthor {
+  getManyAuthor {
+    id
+    url
+    email
+    isPublished
+    created
+    edited
+    updated
+    published
+    avgTimeStory
+    avgAllTimeStory
+  }
+}

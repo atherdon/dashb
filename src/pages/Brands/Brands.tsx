@@ -1,28 +1,14 @@
 import React from 'react';
 
 import { Table } from 'components';
-import { gql, useQuery } from '@apollo/client';
-import { Brand, Query } from 'models/gql';
+import { Brand } from 'models/gql';
 import { ColumnsType } from 'antd/es/table';
 import moment from 'moment';
 import { Spin } from 'antd';
-
-const GET_MANY_BRAND = gql`
-  query {
-    getManyBrand {
-      id
-      url
-      email
-      created
-      updated
-      avgTimeStory
-      avgAllTimeStory
-    }
-  }
-`;
+import { useGetManyBrandQuery } from 'models/gql';
 
 const Brands = () => {
-  const { data, loading } = useQuery<Query>(GET_MANY_BRAND);
+  const { data, loading } = useGetManyBrandQuery();
 
   const DATE_FORMAT = 'MM.DD.YYYY';
   const columns: ColumnsType<Brand> = [

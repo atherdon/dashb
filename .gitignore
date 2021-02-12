@@ -132,4 +132,4 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/src/models/gql.ts
+/src/models/gql.tsx
