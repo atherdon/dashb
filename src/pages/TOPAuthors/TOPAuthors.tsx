@@ -1,15 +1,16 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
+import { Checkbox } from 'antd';
+import { ColumnsType } from 'antd/es/table';
+import moment from 'moment';
 
 import { Table } from 'components';
-import { columns } from './tableColumns';
-import { getTopAuthors } from 'store/thunk';
 import { gql, useQuery } from '@apollo/client';
 import { Author, Query } from 'models/gql';
 
 const GET_MANY_AUTHOR = gql`
   query {
     getManyAuthor {
+      id
       url
       email
       isPublished
@@ -25,9 +26,87 @@ const GET_MANY_AUTHOR = gql`
 
 const TOPAutors = () => {
   const { data } = useQuery<Query>(GET_MANY_AUTHOR);
-  const dataSource = data?.getManyAuthor?.map((item, index) => {
+
+  const DATE_FORMAT = 'MM.DD.YYYY';
+  const columns: ColumnsType<Author> = [
+    {
+      title: 'Draft url',
+      dataIndex: 'url',
+      key: 'url',
+      render: (text) => <a href={text}>{text}</a>
+    },
+    {
+      title: 'Is Published',
+      dataIndex: 'isPublished',
+      key: 'isPublished',
+      render: () => <Checkbox />
+    },
+    {
+      title: 'Email',
+      dataIndex: 'email',
+      key: 'email',
+      render: (email) => <a>{email}</a>
+    },
+    {
+      title: 'Updated',
+      dataIndex: 'updated',
+      key: 'updated',
+      render: (date) => moment(date).format(DATE_FORMAT)
+    },
+    // {
+    //   title: 'Published',
+    //   dataIndex: 'Published',
+    //   key: 'published',
+    //   render: (item: any) =>
+    //     item && <Checkbox checked={item.toLowerCase() === 'true' ? true : false} />
+    // },
+    {
+      title: 'Created',
+      dataIndex: 'created',
+      key: 'created',
+      render: (date) => moment(date).format(DATE_FORMAT)
+    },
+    {
+      title: 'Edited',
+      dataIndex: 'edited',
+      key: 'edited',
+      render: (date) => moment(date).format(DATE_FORMAT)
+    },
+    {
+      title: 'Published',
+      dataIndex: 'published',
+      key: 'published',
+      render: (date) => {
+        // item = item ? item.toString().toUpperCase() : '';
+        // const isRejected = item.includes('REJECTED');
+        // const value = isRejected ? item.replace('REJECTED', '').trim() : item;
+
+        // return (
+        //   value && (
+        //     <>
+        //       {isRejected && <Tag color="red">REJECTED</Tag>}
+        //       {value}
+        //     </>
+        //   )
+        // );
+        return moment(date).format(DATE_FORMAT);
+      }
+    },
+    {
+      title: 'Avg time story',
+      dataIndex: 'avgTimeStory',
+      key: 'avgTimeStory'
+    },
+    {
+      title: 'Avg time ALL story',
+      dataIndex: 'avgAllTimeStory',
+      key: 'avgAllTimeStory'
+    }
+  ];
+
+  const dataSource = data?.getManyAuthor?.map((item) => {
     return {
-      key: index,
+      key: item?.id,
       ...item
     };
   });
