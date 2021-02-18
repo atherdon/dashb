@@ -15,6 +15,8 @@ import { AuthButton, Breadcrumbs } from 'components';
 // Data
 import progressData from 'data/progress';
 import styled from 'styled-components';
+// Header Links
+import { DashboardLink, ProgressBarLink, ExpandedLink } from 'components/Links/HeaderLinks/HeaderLinks';
 
 const { Header, Content } = Layout;
 
@@ -32,13 +34,13 @@ const Router = () => {
           <Col flex="500px">
             <Menu theme="dark" mode="horizontal">
               <Menu.Item>
-                <Link to="/">Dashboard</Link>
+                <DashboardLink />
               </Menu.Item>
               <Menu.Item>
-                <Link to="/progress-bar">Progress Bar</Link>
+                <ProgressBarLink />
               </Menu.Item>
               <Menu.Item>
-                <Link to="/expanded">Expanded</Link>
+                <ExpandedLink />
               </Menu.Item>
             </Menu>
           </Col>
