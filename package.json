@@ -30,8 +30,8 @@
     "web-vitals": "1.1.0"
   },
   "scripts": {
-    "start:dev": "npm run generate && react-scripts start",
-    "start": "node server.js",
+    "start": "npm run generate && react-scripts start",
+    "start:server": "node server.js",
     "build": "npm run generate && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
