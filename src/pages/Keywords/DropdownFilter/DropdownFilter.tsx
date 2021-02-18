@@ -2,8 +2,8 @@ import React from 'react';
 import { Menu, Dropdown } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 
-const DropdownFilter = ({ setKeyword }) => {
-  const changeHandler = (event) => {
+const DropdownFilter = ({ setKeyword }: { setKeyword: any }) => {
+  const changeHandler = (event: any) => {
     setKeyword(event.key);
   };
 
@@ -24,7 +24,7 @@ const DropdownFilter = ({ setKeyword }) => {
         className="ant-dropdown-link"
         onClick={(e) => e.preventDefault()}
         role="button"
-        tabIndex="0">
+        tabIndex={0}>
         Filter By <DownOutlined />
       </a>
     </Dropdown>

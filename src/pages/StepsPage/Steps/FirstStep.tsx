@@ -1,10 +1,9 @@
 import React from 'react';
-
 import { Table } from 'components';
 import topAutors from 'data/top-authors';
 import { columns } from './tableColumns';
 
-const TOPAutors = () => {
+const FirstStep = () => {
   const dataSource = topAutors.map((item, index) => {
     return {
       key: index,
@@ -12,7 +11,7 @@ const TOPAutors = () => {
     };
   });
 
-  return <Table dataSource={dataSource} columns={columns} />;
+  return <Table columns={columns} dataSource={dataSource} />;
 };
 
-export default TOPAutors;
+export default FirstStep;

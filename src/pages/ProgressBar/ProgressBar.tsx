@@ -6,12 +6,12 @@ import editors from 'data/editors';
 
 const { Text, Title } = Typography;
 
-const ProgressBar = ({ data }) => {
+const ProgressBar = ({ data }: { data: any }) => {
   const [percentAvg, setPercentAvg] = useState(0);
   const [percentReal, setPercentReal] = useState(0);
   const [percentNext, setPercentNext] = useState(0);
 
-  const percentCount = (number, real) => {
+  const percentCount = (number: any, real: any) => {
     return Math.round((real * 100) / number);
   };
 

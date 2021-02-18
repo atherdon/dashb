@@ -3,7 +3,7 @@ import { Steps as AntDSteps, Button } from 'antd';
 
 const { Step } = AntDSteps;
 
-export const Steps = ({ steps }) => {
+export const Steps = ({ steps }: { steps: any }) => {
   const [current, setCurrent] = useState(0);
 
   const next = () => {
@@ -17,7 +17,7 @@ export const Steps = ({ steps }) => {
   return (
     <>
       <AntDSteps current={current}>
-        {steps.map((item) => (
+        {steps.map((item: any) => (
           <Step key={item.title} title={item.title} />
         ))}
       </AntDSteps>

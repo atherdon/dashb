@@ -1,7 +1,7 @@
 import React from 'react';
 import { Table } from 'antd';
 
-export const TableExpanded = ({ columns, dataSource }) => (
+export const TableExpanded = ({ columns, dataSource }: { dataSource: any; columns: any }) => (
   <Table
     columns={columns}
     expandable={{

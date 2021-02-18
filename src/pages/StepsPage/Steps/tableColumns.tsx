@@ -6,7 +6,7 @@ export const columns = [
     title: 'Draft url',
     dataIndex: 'Draft url',
     key: 'Draft url',
-    render: (text) => <a href={text}>{text}</a>
+    render: (text: any) => <a href={text}>{text}</a>
   },
   {
     title: 'Column B',
@@ -22,13 +22,14 @@ export const columns = [
     title: 'Email',
     dataIndex: 'email',
     key: 'email',
-    render: (email) => <a>{email}</a>
+    render: (email: any) => <a>{email}</a>
   },
   {
     title: 'Published',
     dataIndex: 'Published',
     key: 'published',
-    render: (item) => item && <Checkbox checked={item.toLowerCase() === 'true' ? true : false} />
+    render: (item: any) =>
+      item && <Checkbox checked={item.toLowerCase() === 'true' ? true : false} />
   },
   {
     title: 'Added',
@@ -44,7 +45,7 @@ export const columns = [
     title: 'Published',
     dataIndex: 'Published__1',
     key: 'Published__1',
-    render: (item) => {
+    render: (item: any) => {
       item = item.toString().toUpperCase();
       const isRejected = item.includes('REJECTED');
       const value = isRejected ? item.replace('REJECTED', '').trim() : item;

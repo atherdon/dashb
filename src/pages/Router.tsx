@@ -58,7 +58,7 @@ const Router = () => {
           <ProtectedRoute path="/steps-page" component={StepsPage} />
           <ProtectedRoute
             path="/progress-bar"
-            component={(props) => <ProgressBar {...props} data={progressData} />}
+            component={(props: any) => <ProgressBar {...props} data={progressData} />}
           />
           <ProtectedRoute path="/keywords" component={Keywords} />
           <ProtectedRoute path="/expanded" component={Expanded} />
