@@ -5,14 +5,14 @@ import moment from 'moment';
 
 import { Table } from 'components';
 import { gql, useQuery } from '@apollo/client';
-import { Author, Query } from 'models/gql';
-import { useGetManyAuthorQuery } from 'models/gql';
+import { TopAuthor, Query } from 'models/gql';
+import { useGetManyTopAuthorQuery } from 'models/gql';
 
 const TOPAutors = () => {
-  const { data, loading } = useGetManyAuthorQuery();
+  const { data, loading } = useGetManyTopAuthorQuery();
 
   const DATE_FORMAT = 'MM.DD.YYYY';
-  const columns: ColumnsType<Author> = [
+  const columns: ColumnsType<TopAuthor> = [
     {
       title: 'Draft url',
       dataIndex: 'url',
@@ -88,7 +88,7 @@ const TOPAutors = () => {
     }
   ];
 
-  const dataSource = data?.getManyAuthor.map((item) => {
+  const dataSource = data?.getManyTopAuthor.map((item) => {
     return {
       key: item?.id,
       ...item

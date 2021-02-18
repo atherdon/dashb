@@ -14,7 +14,7 @@ const Dashboard = () => {
           </Card>
         </Col>
         <Col flex="300px">
-          <Card title="BAA" extra={<Link to="/baa">More</Link>} hoverable>
+          <Card title="Evergreen" extra={<Link to="/baa">More</Link>} hoverable>
             <p>20 stories</p>
             <p>+counter</p>
           </Card>

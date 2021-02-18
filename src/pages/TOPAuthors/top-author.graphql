@@ -1,5 +1,5 @@
-query getManyAuthor {
-  getManyAuthor {
+query getManyTopAuthor {
+  getManyTopAuthor {
     id
     url
     email
