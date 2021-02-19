@@ -1,5 +1,5 @@
 import React from 'react';
-import { TopAuthors, Baa, StepsPage, Keywords } from 'components/Links/CardMoreLinks/CardMoreLinks';
+import { TopAuthors, Baa, StepsPage, Keywords, EditedStories } from 'components/Links/CardMoreLinks/CardMoreLinks';
 
 const cards = [
   {
@@ -58,7 +58,7 @@ const cards = [
   {
     title: 'Edited Stories',
     hoverable: true,
-    extra: null,
+    extra: EditedStories,
     content: (
       <>
         <p>desc</p>
