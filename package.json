@@ -15,6 +15,8 @@
     "antd": "4.12.3",
     "express": "^4.17.1",
     "graphql": "15.5.0",
+    "husky": "^5.0.9",
+    "lint-staged": "^10.5.4",
     "moment": "2.29.1",
     "path": "0.12.7",
     "react": "17.0.1",
@@ -35,7 +37,7 @@
     "build": "npm run generate && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint .",
+    "lint": "eslint '*/**/*.{ts,tsx}' --quiet",
     "generate": "graphql-codegen",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
@@ -43,6 +45,16 @@
     "extends": [
       "react-app",
       "react-app/jest"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint '*/**/*.{ts,tsx}' --quiet"
     ]
   },
   "browserslist": {

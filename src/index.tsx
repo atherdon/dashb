@@ -10,7 +10,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store/store';
 import 'antd/dist/antd.css';
-import { ApolloClient, InMemoryCache, gql, ApolloProvider, HttpLink } from '@apollo/client';
+import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink } from '@apollo/client';
 
 const httpLink = new HttpLink({ uri: process.env.REACT_APP_GRAPHQL_API });
 
