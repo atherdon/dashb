@@ -4,8 +4,7 @@ import { ColumnsType } from 'antd/es/table';
 import moment from 'moment';
 
 import { Table } from 'components';
-import { gql, useQuery } from '@apollo/client';
-import { TopAuthor, Query } from 'models/gql';
+import { TopAuthor } from 'models/gql';
 import { useGetManyTopAuthorQuery } from 'models/gql';
 
 const EditedStories = () => {
