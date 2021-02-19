@@ -15,7 +15,6 @@ import { AuthButton, Breadcrumbs } from 'components';
 // Data
 import progressData from 'data/progress';
 import styled from 'styled-components';
-// Header Links
 import { DashboardLink, ProgressBarLink, ExpandedLink } from 'components/Links/HeaderLinks/HeaderLinks';
 import EditedStories from './EditedStories/EditedStories';
 
