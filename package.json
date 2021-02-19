@@ -37,7 +37,8 @@
     "eject": "react-scripts eject",
     "lint": "eslint '*/**/*.{ts,tsx}' --quiet",
     "generate": "graphql-codegen",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "precommit": "lint-staged"
   },
   "eslintConfig": {
     "extends": [
