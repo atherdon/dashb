@@ -15,8 +15,8 @@ import { AuthButton, Breadcrumbs } from 'components';
 // Data
 import progressData from 'data/progress';
 import styled from 'styled-components';
-// Header Links
 import { DashboardLink, ProgressBarLink, ExpandedLink } from 'components/Links/HeaderLinks/HeaderLinks';
+import EditedStories from './EditedStories/EditedStories';
 
 const { Header, Content } = Layout;
 
@@ -62,6 +62,7 @@ const Router = () => {
           />
           <ProtectedRoute path="/keywords" component={Keywords} />
           <ProtectedRoute path="/expanded" component={Expanded} />
+          <ProtectedRoute path="/edited-stories" component={EditedStories} />
         </Switch>
       </StyledContent>
     </Layout>

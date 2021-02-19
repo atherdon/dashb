@@ -1,6 +1,10 @@
 import React from 'react';
 import { Steps } from 'components';
 import FirstStep from './Steps/FirstStep';
+import SecondStep from './Steps/SecondStep';
+import ThirdStep from './Steps/ThirdStep';
+import FourthStep from './Steps/FourthStep';
+import FifthStep from './Steps/FifthStep';
 
 const steps = [
   {
@@ -9,19 +13,19 @@ const steps = [
   },
   {
     title: 'Second',
-    content: 'Second-content'
+    content: <SecondStep />
   },
   {
-    title: 'Thirld',
-    content: 'Last-content'
+    title: 'Third',
+    content: <ThirdStep />
   },
   {
     title: 'Forth',
-    content: 'Last-content'
+    content: <FourthStep />
   },
   {
     title: 'Fifth',
-    content: 'Last-content'
+    content: <FifthStep />
   }
 ];
 
