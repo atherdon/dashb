@@ -3,7 +3,7 @@ import { Table } from 'components';
 import topAutors from 'data/top-authors';
 import { Checkbox, Tag } from 'antd';
 
-const FirstStep = () => {
+const FifthStep = () => {
   const columns = [
     {
       title: 'Draft url',
@@ -82,4 +82,4 @@ const FirstStep = () => {
   return <Table columns={columns} dataSource={dataSource} />;
 };
 
-export default FirstStep;
+export default FifthStep;

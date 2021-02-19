@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { Steps as AntDSteps, Button } from 'antd';
+import styled from 'styled-components';
 
 const { Step } = AntDSteps;
+
+const StyledStepsContent = styled.div`
+  margin-top: 15px;
+`;
 
 export const Steps = ({ steps }: { steps: any }) => {
   const [current, setCurrent] = useState(0);
@@ -21,7 +26,7 @@ export const Steps = ({ steps }: { steps: any }) => {
           <Step key={item.title} title={item.title} />
         ))}
       </AntDSteps>
-      <div className="steps-content">{steps[current].content}</div>
+      <StyledStepsContent className="steps-content">{steps[current].content}</StyledStepsContent>
       <div className="steps-action">
         {current < steps.length - 1 && (
           <Button type="primary" onClick={() => next()}>
