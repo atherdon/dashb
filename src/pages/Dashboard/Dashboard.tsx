@@ -6,7 +6,7 @@ import { cards } from 'data/cards';
 const Dashboard = () => {
   return (
     <StyledCards>
-      <Row justify="space-between" wrap align="middle" gutter={[24, 24]}>
+      <Row justify="start" wrap align="middle" gutter={[24, 24]}>
         {cards.map((Val) => (
           <Col flex="300px" key={Val.title}>
             <Card
