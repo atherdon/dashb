@@ -1,6 +1,6 @@
 import React from 'react';
 import { Menu, Row, Col, Layout } from 'antd';
-import { Switch, Link } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 // Components
 import Dashboard from './Dashboard/Dashboard';
@@ -15,7 +15,11 @@ import { AuthButton, Breadcrumbs } from 'components';
 // Data
 import progressData from 'data/progress';
 import styled from 'styled-components';
-import { DashboardLink, ProgressBarLink, ExpandedLink } from 'components/Links/HeaderLinks/HeaderLinks';
+import {
+  DashboardLink,
+  ProgressBarLink,
+  ExpandedLink
+} from 'components/Links/HeaderLinks/HeaderLinks';
 import EditedStories from './EditedStories/EditedStories';
 
 const { Header, Content } = Layout;
