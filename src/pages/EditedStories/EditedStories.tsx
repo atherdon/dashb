@@ -1,5 +1,5 @@
 import React from 'react';
-import { Checkbox, Spin } from 'antd';
+import { Button, Checkbox, Dropdown, Menu, Spin } from 'antd';
 import { ColumnsType } from 'antd/es/table';
 import moment from 'moment';
 
@@ -84,6 +84,22 @@ const EditedStories = () => {
       title: 'Avg time ALL story',
       dataIndex: 'avgAllTimeStory',
       key: 'avgAllTimeStory'
+    },
+    {
+      title: '',
+      dataIndex: 'rejected',
+      key: 'rejected',
+      render: () => (
+        <Dropdown
+          overlay={
+            <Menu>
+              <Menu.Item key="1">Rejected</Menu.Item>
+            </Menu>
+          }
+          trigger={['click']}>
+          <Button>Rejected</Button>
+        </Dropdown>
+      )
     }
   ];
 

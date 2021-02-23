@@ -4,7 +4,7 @@ import { Table } from 'components';
 import { Brand } from 'models/gql';
 import { ColumnsType } from 'antd/es/table';
 import moment from 'moment';
-import { Spin } from 'antd';
+import { Button, Dropdown, Menu, Spin } from 'antd';
 import { useGetManyBrandQuery } from 'models/gql';
 
 const Brands = () => {
@@ -72,6 +72,22 @@ const Brands = () => {
       title: 'Avg time ALL story',
       dataIndex: 'avgAllTimeStory',
       key: 'avgAllTimeStory'
+    },
+    {
+      title: '',
+      dataIndex: 'rejected',
+      key: 'rejected',
+      render: () => (
+        <Dropdown
+          overlay={
+            <Menu>
+              <Menu.Item key="1">Rejected</Menu.Item>
+            </Menu>
+          }
+          trigger={['click']}>
+          <Button>Rejected</Button>
+        </Dropdown>
+      )
     }
   ];
 
