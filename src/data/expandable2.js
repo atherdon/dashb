@@ -94,7 +94,7 @@ const expandable = [
       'https://app.hackernoon.com/drafts/smj92gpyekO2ANX0h2Qm',
       'https://app.hackernoon.com/drafts/smj92gpyekO2ANX0h2Qm'
     ]
-  },
+  }
 ];
 
 export default expandable;
