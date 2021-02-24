@@ -3,6 +3,7 @@ import { Button, Checkbox, Dropdown, Menu, Spin } from 'antd';
 import { ColumnsType } from 'antd/es/table';
 import moment from 'moment';
 
+import { topAuthorLinks } from "data/links/topAuthorLinks";
 import { Table } from 'components';
 import { TopAuthor } from 'models/gql';
 import { useGetManyTopAuthorQuery } from 'models/gql';
@@ -103,10 +104,11 @@ const TOPAutors = () => {
     }
   ];
 
-  const dataSource = data?.getManyTopAuthor.map((item) => {
+  const dataSource = data?.getManyTopAuthor.map((item, index) => {
     return {
       key: item?.id,
-      ...item
+      ...item,
+      'Draft url': topAuthorLinks[index]
     };
   });
 
