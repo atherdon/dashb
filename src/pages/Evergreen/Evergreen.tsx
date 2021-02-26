@@ -1,17 +1,17 @@
 import React from 'react';
 
 import { Table } from 'components';
-import { Brand } from 'models/gql';
+import { Evergreen as EvergreenType } from 'models/gql';
 import { ColumnsType } from 'antd/es/table';
 import moment from 'moment';
 import { Button, Dropdown, Menu, Spin } from 'antd';
-import { useGetManyBrandQuery } from 'models/gql';
+import { useGetManyEvergreenQuery } from 'models/gql';
 
-const Brands = () => {
-  const { data, loading } = useGetManyBrandQuery();
+const Evergreen = () => {
+  const { data, loading } = useGetManyEvergreenQuery();
 
   const DATE_FORMAT = 'MM.DD.YYYY';
-  const columns: ColumnsType<Brand> = [
+  const columns: ColumnsType<EvergreenType> = [
     {
       title: 'Draft url',
       dataIndex: 'url',
@@ -91,7 +91,7 @@ const Brands = () => {
     }
   ];
 
-  const dataSource = data?.getManyBrand.map((item) => {
+  const dataSource = data?.getManyEvergreen.items?.map((item) => {
     return {
       key: item?.id,
       ...item
@@ -101,4 +101,4 @@ const Brands = () => {
   return loading ? <Spin /> : <Table dataSource={dataSource} columns={columns} />;
 };
 
-export default Brands;
+export default Evergreen;

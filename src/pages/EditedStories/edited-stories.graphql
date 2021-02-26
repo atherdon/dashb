@@ -1,0 +1,17 @@
+query getManyEdited{
+    getManyEdited {
+        count
+        items {
+            id
+            url
+            v
+            isPublished
+            added
+            edited
+            published
+            avgTimeStory
+            avgAllTimeStory
+            email
+        }
+    }
+}

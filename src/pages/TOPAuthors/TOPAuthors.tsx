@@ -16,7 +16,7 @@ const TOPAutors = () => {
       title: 'Draft url',
       dataIndex: 'url',
       key: 'url',
-      render: (text) => <a href={text}>{text}</a>
+      render: (_, row) => <a href={row.url}>{row.url}</a>
     },
     {
       title: 'Is Published',
@@ -28,13 +28,13 @@ const TOPAutors = () => {
       title: 'Email',
       dataIndex: 'email',
       key: 'email',
-      render: (email) => <a>{email}</a>
+      render: (_, row) => <a>{row.email}</a>
     },
     {
       title: 'Updated',
       dataIndex: 'updated',
       key: 'updated',
-      render: (date) => moment(date).format(DATE_FORMAT)
+      render: (_, row) => moment(row.updated).format(DATE_FORMAT)
     },
     // {
     //   title: 'Published',
@@ -47,19 +47,19 @@ const TOPAutors = () => {
       title: 'Created',
       dataIndex: 'created',
       key: 'created',
-      render: (date) => moment(date).format(DATE_FORMAT)
+      render: (_, row) => moment(row.created).format(DATE_FORMAT)
     },
     {
       title: 'Edited',
       dataIndex: 'edited',
       key: 'edited',
-      render: (date) => moment(date).format(DATE_FORMAT)
+      render: (_, row) => moment(row.edited).format(DATE_FORMAT)
     },
     {
       title: 'Published',
       dataIndex: 'published',
       key: 'published',
-      render: (date) => {
+      render: (_, row) => {
         // item = item ? item.toString().toUpperCase() : '';
         // const isRejected = item.includes('REJECTED');
         // const value = isRejected ? item.replace('REJECTED', '').trim() : item;
@@ -72,7 +72,7 @@ const TOPAutors = () => {
         //     </>
         //   )
         // );
-        return moment(date).format(DATE_FORMAT);
+        return moment(row.published).format(DATE_FORMAT);
       }
     },
     {
@@ -103,7 +103,7 @@ const TOPAutors = () => {
     }
   ];
 
-  const dataSource = data?.getManyTopAuthor.map((item) => {
+  const dataSource = data?.getManyTopAuthor.items?.map((item) => {
     return {
       key: item?.id,
       ...item

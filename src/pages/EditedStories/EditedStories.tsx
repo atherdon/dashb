@@ -1,22 +1,26 @@
 import React from 'react';
 import { Button, Checkbox, Dropdown, Menu, Spin } from 'antd';
 import { ColumnsType } from 'antd/es/table';
-import moment from 'moment';
 
 import { Table } from 'components';
-import { TopAuthor } from 'models/gql';
-import { useGetManyTopAuthorQuery } from 'models/gql';
+import { Edited } from 'models/gql';
+import { useGetManyEditedQuery } from 'models/gql';
 
 const EditedStories = () => {
-  const { data, loading } = useGetManyTopAuthorQuery();
+  const { data, loading } = useGetManyEditedQuery();
 
-  const DATE_FORMAT = 'MM.DD.YYYY';
-  const columns: ColumnsType<TopAuthor> = [
+  const columns: ColumnsType<Edited> = [
     {
       title: 'Draft url',
       dataIndex: 'url',
       key: 'url',
-      render: (text) => <a href={text}>{text}</a>
+      render: (_, row) => <a href={row.url}>{row.url}</a>
+    },
+    {
+      title: 'V',
+      dataIndex: 'v',
+      key: 'v',
+      render: () => <Checkbox />
     },
     {
       title: 'Is Published',
@@ -28,13 +32,13 @@ const EditedStories = () => {
       title: 'Email',
       dataIndex: 'email',
       key: 'email',
-      render: (email) => <a>{email}</a>
+      render: (_, row) => <a>{row.email}</a>
     },
     {
-      title: 'Updated',
-      dataIndex: 'updated',
-      key: 'updated',
-      render: (date) => moment(date).format(DATE_FORMAT)
+      title: 'Edited',
+      dataIndex: 'Edited',
+      key: 'Edited',
+      render: (_, row) => row.edited
     },
     // {
     //   title: 'Published',
@@ -44,22 +48,22 @@ const EditedStories = () => {
     //     item && <Checkbox checked={item.toLowerCase() === 'true' ? true : false} />
     // },
     {
-      title: 'Created',
-      dataIndex: 'created',
-      key: 'created',
-      render: (date) => moment(date).format(DATE_FORMAT)
+      title: 'Added',
+      dataIndex: 'added',
+      key: 'added',
+      render: (_, row) => row.added
     },
     {
       title: 'Edited',
       dataIndex: 'edited',
       key: 'edited',
-      render: (date) => moment(date).format(DATE_FORMAT)
+      render: (_, row) => row.edited
     },
     {
       title: 'Published',
       dataIndex: 'published',
       key: 'published',
-      render: (date) => {
+      render: (_, row) => {
         // item = item ? item.toString().toUpperCase() : '';
         // const isRejected = item.includes('REJECTED');
         // const value = isRejected ? item.replace('REJECTED', '').trim() : item;
@@ -72,7 +76,7 @@ const EditedStories = () => {
         //     </>
         //   )
         // );
-        return moment(date).format(DATE_FORMAT);
+        return row.published;
       }
     },
     {
@@ -103,7 +107,7 @@ const EditedStories = () => {
     }
   ];
 
-  const dataSource = data?.getManyTopAuthor.map((item) => {
+  const dataSource = data?.getManyEdited.items?.map((item) => {
     return {
       key: item?.id,
       ...item

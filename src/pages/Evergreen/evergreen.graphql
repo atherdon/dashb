@@ -1,15 +1,12 @@
-query getManyTopAuthor {
-  getManyTopAuthor {
+query getManyEvergreen {
+  getManyEvergreen {
     count
     items {
       id
       url
       email
-      isPublished
       created
-      edited
       updated
-      published
       avgTimeStory
       avgAllTimeStory
     }

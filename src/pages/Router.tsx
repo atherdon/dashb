@@ -7,7 +7,7 @@ import Dashboard from './Dashboard/Dashboard';
 import TOPAuthors from './TOPAuthors/TOPAuthors';
 import StepsPage from './StepsPage/StepsPage';
 import ProgressBar from './ProgressBar/ProgressBar';
-import Brands from './Brands/Brands';
+import Evergreen from './Evergreen/Evergreen';
 import Keywords from './Keywords/Keywords';
 import Expanded from './Expanded/Expanded';
 import ProtectedRoute from 'auth/ProtectedRoute';
@@ -58,7 +58,7 @@ const Router = () => {
         <Switch>
           <ProtectedRoute path="/" exact component={Dashboard} />
           <ProtectedRoute path="/top-authors" component={TOPAuthors} />
-          <ProtectedRoute path="/baa" component={Brands} />
+          <ProtectedRoute path="/baa" component={Evergreen} />
           <ProtectedRoute path="/steps-page" component={StepsPage} />
           <ProtectedRoute
             path="/progress-bar"
