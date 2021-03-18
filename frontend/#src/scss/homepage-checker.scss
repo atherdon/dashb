@@ -1,0 +1,55 @@
+.homepage-checker {
+	width: 100%;
+	height: 100%;
+	max-width: 980px;
+	background-color: $iron;
+
+	&__inner {
+		padding: 0 0 50px;
+		background-color: $white;
+	}
+
+	.top-title {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 50px;
+		width: 100%;
+		height: 100px;
+		font-weight: 700;
+		font-size: 30px;
+		background-color: $green;
+	}
+
+	.row {
+		display: flex;
+		justify-content: space-between;
+
+		&:nth-child(even) {
+			.col {
+				background-color: $iron;
+			}
+		}
+	}
+
+	.col {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 10px 40px;
+		width: 100%;
+		max-width: 45%;
+		font-size: 14px;
+
+		a {
+			font-size: 18px;
+			text-decoration: underline;
+			color: $mine-shaft;
+		}
+
+		small {
+			font-size: 18px;
+			color: $japanese-laurel;
+		}
+	}
+}
