@@ -3,13 +3,19 @@ import { Button, Checkbox, Dropdown, Menu, Spin } from 'antd';
 import { ColumnsType } from 'antd/es/table';
 
 import { Table } from 'components';
-import { Edited } from 'models/gql';
-import { useGetManyEditedQuery } from 'models/gql';
+import { Article } from 'models/gql';
+import { useGetManyArticleQuery } from 'models/gql';
 
 const EditedStories = () => {
-  const { data, loading } = useGetManyEditedQuery();
+  const { data, loading } = useGetManyArticleQuery({
+    variables: {
+      where: {
+        type: 'topAuthors'
+      }
+    }
+  });
 
-  const columns: ColumnsType<Edited> = [
+  const columns: ColumnsType<Article> = [
     {
       title: 'Draft url',
       dataIndex: 'url',
@@ -28,12 +34,12 @@ const EditedStories = () => {
       key: 'isPublished',
       render: () => <Checkbox />
     },
-    {
-      title: 'Email',
-      dataIndex: 'email',
-      key: 'email',
-      render: (_, row) => <a>{row.email}</a>
-    },
+    // {
+    //   title: 'Email',
+    //   dataIndex: 'email',
+    //   key: 'email',
+    //   render: (_, row) => <a>{row.email}</a>
+    // },
     {
       title: 'Edited',
       dataIndex: 'Edited',
@@ -107,7 +113,7 @@ const EditedStories = () => {
     }
   ];
 
-  const dataSource = data?.getManyEdited.items?.map((item) => {
+  const dataSource = data?.getManyArticle.items?.map((item) => {
     return {
       key: item?.id,
       ...item

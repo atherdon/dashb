@@ -36,7 +36,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint '*/**/*.{ts,tsx}' --quiet",
-    "generate": "graphql-codegen",
+    "generate": "graphql-codegen -r dotenv/config --config codegen.yml dotenv_config_path=.env ",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "eslintConfig": {

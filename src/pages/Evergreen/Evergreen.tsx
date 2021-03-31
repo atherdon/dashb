@@ -1,17 +1,23 @@
 import React from 'react';
 
 import { Table } from 'components';
-import { Evergreen as EvergreenType } from 'models/gql';
 import { ColumnsType } from 'antd/es/table';
 import moment from 'moment';
 import { Button, Dropdown, Menu, Spin } from 'antd';
-import { useGetManyEvergreenQuery } from 'models/gql';
+import { Article } from 'models/gql';
+import { useGetManyArticleQuery } from 'models/gql';
 
 const Evergreen = () => {
-  const { data, loading } = useGetManyEvergreenQuery();
+  const { data, loading } = useGetManyArticleQuery({
+    variables: {
+      where: {
+        type: 'topAuthors'
+      }
+    }
+  });
 
   const DATE_FORMAT = 'MM.DD.YYYY';
-  const columns: ColumnsType<EvergreenType> = [
+  const columns: ColumnsType<Article> = [
     {
       title: 'Draft url',
       dataIndex: 'url',
@@ -91,7 +97,7 @@ const Evergreen = () => {
     }
   ];
 
-  const dataSource = data?.getManyEvergreen.items?.map((item) => {
+  const dataSource = data?.getManyArticle.items?.map((item) => {
     return {
       key: item?.id,
       ...item

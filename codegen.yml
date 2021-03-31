@@ -1,4 +1,4 @@
-schema: https://dash-back.uyem.ru/graphql
+schema: ${REACT_APP_GRAPHQL_API}
 documents: './src/**/*.graphql'
 generates:
   ./src/models/gql.tsx:

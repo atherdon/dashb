@@ -4,14 +4,20 @@ import { ColumnsType } from 'antd/es/table';
 import moment from 'moment';
 
 import { Table } from 'components';
-import { TopAuthor } from 'models/gql';
-import { useGetManyTopAuthorQuery } from 'models/gql';
+import { Article } from 'models/gql';
+import { useGetManyArticleQuery } from 'models/gql';
 
 const TOPAutors = () => {
-  const { data, loading } = useGetManyTopAuthorQuery();
+  const { data, loading } = useGetManyArticleQuery({
+    variables: {
+      where: {
+        type: 'topAuthors'
+      }
+    }
+  });
 
   const DATE_FORMAT = 'MM.DD.YYYY';
-  const columns: ColumnsType<TopAuthor> = [
+  const columns: ColumnsType<Article> = [
     {
       title: 'Draft url',
       dataIndex: 'url',
@@ -24,12 +30,12 @@ const TOPAutors = () => {
       key: 'isPublished',
       render: () => <Checkbox />
     },
-    {
-      title: 'Email',
-      dataIndex: 'email',
-      key: 'email',
-      render: (_, row) => <a>{row.email}</a>
-    },
+    // {
+    //   title: 'Email',
+    //   dataIndex: 'email',
+    //   key: 'email',
+    //   render: (_, row) => <a>{row.email}</a>
+    // },
     {
       title: 'Updated',
       dataIndex: 'updated',
@@ -103,7 +109,7 @@ const TOPAutors = () => {
     }
   ];
 
-  const dataSource = data?.getManyTopAuthor.items?.map((item) => {
+  const dataSource = data?.getManyArticle.items?.map((item) => {
     return {
       key: item?.id,
       ...item
