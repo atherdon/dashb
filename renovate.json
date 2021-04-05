@@ -2,5 +2,5 @@
   "extends": [
     "config:base"
   ],
-  "baseBranch": "develop"
+  "baseBranch": "main"
 }
