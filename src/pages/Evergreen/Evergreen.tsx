@@ -104,7 +104,11 @@ const Evergreen = () => {
     };
   });
 
-  return loading ? <Spin /> : <Table dataSource={dataSource} columns={columns} />;
+  return loading ? (
+    <Spin />
+  ) : (
+    <Table dataSource={dataSource as Readonly<Article[] | undefined>} columns={columns} />
+  );
 };
 
 export default Evergreen;

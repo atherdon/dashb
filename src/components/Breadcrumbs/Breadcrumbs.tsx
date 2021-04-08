@@ -9,7 +9,7 @@ const StyledBreadcrumb = styled(Breadcrumb)`
   font-size: 18px;
 `;
 
-export const Breadcrumbs = () => {
+export const Breadcrumbs = (): JSX.Element => {
   const location = useLocation();
   const pathSnippets = location.pathname.split('/').filter((i) => i);
 

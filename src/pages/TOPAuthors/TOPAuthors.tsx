@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button, Checkbox, Dropdown, Menu, Spin } from 'antd';
-import { ColumnsType } from 'antd/es/table';
+import { Button, Checkbox, Dropdown, Menu, Spin, TableProps } from 'antd';
 import moment from 'moment';
 
 import { Table } from 'components';
@@ -17,7 +16,7 @@ const TOPAutors = () => {
   });
 
   const DATE_FORMAT = 'MM.DD.YYYY';
-  const columns: ColumnsType<Article> = [
+  const columns: TableProps<Article>['columns'] = [
     {
       title: 'Draft url',
       dataIndex: 'url',
@@ -116,7 +115,11 @@ const TOPAutors = () => {
     };
   });
 
-  return loading ? <Spin /> : <Table dataSource={dataSource} columns={columns} />;
+  return loading ? (
+    <Spin />
+  ) : (
+    <Table dataSource={dataSource as Readonly<Article[] | undefined>} columns={columns} />
+  );
 };
 
 export default TOPAutors;

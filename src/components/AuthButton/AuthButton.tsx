@@ -8,7 +8,7 @@ const AuthButton = ({
 }: {
   logout: Auth0ContextInterface['logout'];
   user: Auth0ContextInterface['user'];
-}) => {
+}): JSX.Element => {
   const menu = (
     <Menu>
       <Menu.Item

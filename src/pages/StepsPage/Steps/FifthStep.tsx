@@ -3,8 +3,6 @@ import { Table } from 'components';
 import topAutors from 'data/top-authors';
 import { Checkbox, Tag } from 'antd';
 
-
-
 const FifthStep = () => {
   const columns = [
     {
