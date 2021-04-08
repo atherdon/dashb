@@ -22,8 +22,9 @@
   "extends": [
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
+    "prettier",
     // "eslint:recommended",
-    "prettier/@typescript-eslint",
+    // "prettier/@typescript-eslint",
     // "plugin:jsx-a11y/recommended",
     "plugin:prettier/recommended" // Make this the last element so prettier config overrides other formatting rules
   ],
@@ -33,6 +34,8 @@
     "react/display-name": 0,
     "jsx-a11y/anchor-is-valid": 0,
     "no-unused-vars": "error",
-    "jsx-a11y/click-events-have-key-events": 0
+    "jsx-a11y/click-events-have-key-events": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/no-explicit-any": 0
   }
 }

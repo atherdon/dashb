@@ -10,7 +10,7 @@ const EditedStories = () => {
   const { data, loading } = useGetManyArticleQuery({
     variables: {
       where: {
-        type: 'topAuthors'
+        type: 'edited'
       }
     }
   });
@@ -120,7 +120,11 @@ const EditedStories = () => {
     };
   });
 
-  return loading ? <Spin /> : <Table dataSource={dataSource} columns={columns} />;
+  return loading ? (
+    <Spin />
+  ) : (
+    <Table dataSource={dataSource as Readonly<Article[] | undefined>} columns={columns} />
+  );
 };
 
 export default EditedStories;

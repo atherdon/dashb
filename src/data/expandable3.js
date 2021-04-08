@@ -1,5 +1,5 @@
-const expandable = [ 
-{
+const expandable = [
+  {
     key: 1,
     name: 'Programming',
     address: 'New York No. 1 Lake Park',
@@ -47,7 +47,7 @@ const expandable = [
       'https://app.hackernoon.com/drafts/smj92gpyekO2ANX0h2Qm'
     ]
   },
-    {
+  {
     key: 4,
     name: 'Bad Keywords',
     address: 'Sidney No. 1 Lake Park',

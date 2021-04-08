@@ -7,8 +7,12 @@ const { Step } = AntDSteps;
 const StyledStepsContent = styled.div`
   margin-top: 15px;
 `;
+interface Step {
+  title: string;
+  content: JSX.Element;
+}
 
-export const Steps = ({ steps }: { steps: any }) => {
+export const Steps = ({ steps }: { steps: Step[] }) => {
   const [current, setCurrent] = useState(0);
 
   const next = () => {
@@ -22,7 +26,7 @@ export const Steps = ({ steps }: { steps: any }) => {
   return (
     <>
       <AntDSteps current={current}>
-        {steps.map((item: any) => (
+        {steps.map((item) => (
           <Step key={item.title} title={item.title} />
         ))}
       </AntDSteps>
