@@ -10,7 +10,7 @@ const EditedStories = () => {
   const { data, loading } = useGetManyArticleQuery({
     variables: {
       where: {
-        type: 'topAuthors'
+        type: 'edited'
       }
     }
   });

@@ -11,7 +11,7 @@ const TOPAutors = () => {
   const { data, loading } = useGetManyArticleQuery({
     variables: {
       where: {
-        type: 'topAuthors'
+        type: 'top-authors'
       }
     }
   });
@@ -28,7 +28,7 @@ const TOPAutors = () => {
       title: 'Is Published',
       dataIndex: 'isPublished',
       key: 'isPublished',
-      render: () => <Checkbox />
+      render: (_, row) => <Checkbox value={row.isPublished} />
     },
     // {
     //   title: 'Email',
