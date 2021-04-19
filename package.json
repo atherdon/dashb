@@ -68,10 +68,10 @@
     ]
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "1.21.3",
-    "@graphql-codegen/typescript": "1.21.1",
-    "@graphql-codegen/typescript-operations": "1.17.15",
-    "@graphql-codegen/typescript-react-apollo": "2.2.3",
+    "@graphql-codegen/cli": "1.21.4",
+    "@graphql-codegen/typescript": "1.22.0",
+    "@graphql-codegen/typescript-operations": "1.17.16",
+    "@graphql-codegen/typescript-react-apollo": "2.2.4",
     "@types/react-redux": "7.1.16",
     "@types/react-router-dom": "5.1.7",
     "@types/styled-components": "5.1.9",
